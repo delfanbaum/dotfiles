@@ -1,0 +1,12 @@
+window:
+  columns: 125
+  lines: 36
+
+scrolling:
+  history: 1000
+  multiplier: 3
+
+font:
+  normal:
+    family: "SauceCodePro Nerd Font" 
+  size: 13
