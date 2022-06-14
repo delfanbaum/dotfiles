@@ -7,3 +7,4 @@ A place to start:
 Plugins to look into:
 
 * https://github.com/nvim-telescope/telescope.nvim
+* https://github.com/nvim-pack/nvim-spectre
