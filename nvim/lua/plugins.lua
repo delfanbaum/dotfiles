@@ -23,6 +23,7 @@ return require('packer').startup(function()
 
     -- Writing things
     use 'habamax/vim-asciidoctor'
+    use 'tpope/vim-surround'
 
     -- Programming things
     use 'neovim/nvim-lspconfig'
