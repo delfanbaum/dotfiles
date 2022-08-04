@@ -7,7 +7,7 @@ vim.cmd([[
     let g:lightline = {
  	\ 'colorscheme': 'one',
 	\ 'mode_map': {
-	    \ 'n': 'N',
+    	    \ 'n': 'N',
             \ 'i' : 'I',
             \ 'R' : 'R',
             \ 'v' : 'V',
