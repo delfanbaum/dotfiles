@@ -6,7 +6,7 @@ HOME = os.getenv("HOME")
 vim.cmd([[ 
     :command W w
     syntax on 
-    autocmd BufRead,BufNewFile *.adoc setlocal nocursorline
+    set termguicolors
 ]])
 
 
@@ -42,17 +42,8 @@ vim.opt.autoindent = true
 vim.opt.wrap = true -- add soft wraps
 vim.opt.linebreak = true
 
--- I _think_ this can all be replaced by treesitter?
--- autocmd Filetype html setlocal ts=2 sw=2
--- autocmd Filetype css setlocal ts=2 sw=2
--- autocmd Filetype scss setlocal ts=2 sw=2
--- autocmd Filetype javascript setlocal ts=2 sw=2
--- autocmd Filetype xml setlocal ts=2 sw=2
--- autocmd Filetype ruby setlocal ts=2 sw=2
-
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel= 99 -- reminder: use za to fold
 vim.opt.clipboard = "unnamed"
 
--- let python_highlight_all=1
-
+vim.opt.mouse = "a"

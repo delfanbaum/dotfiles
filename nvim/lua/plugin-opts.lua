@@ -38,10 +38,23 @@ vim.cmd('autocmd VimEnter * NERDTree | wincmd p')
 vim.cmd("autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif")
 
 -- Open the existing NERDTree on each new tab.
-vim.cmd("autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif")
+--vim.cmd("autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif")
 
 -- FZF
 
 vim.cmd([[
 "    call fzf#run({'sink': 'vsplit'})
+]])
+
+-- ALE
+
+vim.cmd([[
+    let g:ale_linters_ignore = {
+        \ 'python': ['pylint', 'pyright']
+    \}
+    let g:ale_echo_msg_format = '%linter% says %s'
+    let g:ale_virtualtext_cursor = 1
+    let g:ale_lint_on_text_changed = 0
+    let g:ale_lint_on_save = 1
+    let g:ale_lint_on_insert_leave = 0
 ]])
