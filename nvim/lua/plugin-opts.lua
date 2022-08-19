@@ -1,7 +1,13 @@
 -- theme things
 
 -- start here
-vim.cmd('colorscheme onedark')
+
+-- colors
+
+vim.o.termguicolors = 1
+vim.cmd'colorscheme onedark'
+
+-- lighline
 
 vim.cmd([[
     let g:lightline = {
@@ -50,7 +56,7 @@ vim.cmd([[
 
 vim.cmd([[
     let g:ale_linters_ignore = {
-        \ 'python': ['pylint', 'pyright']
+        \ 'python': ['pylint', 'pyright', 'flake8']
     \}
     let g:ale_echo_msg_format = '%linter% says %s'
     let g:ale_virtualtext_cursor = 1

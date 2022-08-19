@@ -1,15 +1,6 @@
 HOME = os.getenv("HOME")
 
 -- vim stuff
-
--- workarounds; note that autocmd will go away in 0.7.0
-vim.cmd([[ 
-    :command W w
-    syntax on 
-    set termguicolors
-]])
-
-
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us' -- spelling is good!
 vim.opt.number = true -- add line numbers
