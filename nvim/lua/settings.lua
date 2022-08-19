@@ -1,6 +1,11 @@
 HOME = os.getenv("HOME")
 
 -- vim stuff
+vim.cmd([[ 
+    :command W w
+    syntax on 
+]])
+
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us' -- spelling is good!
 vim.opt.number = true -- add line numbers
