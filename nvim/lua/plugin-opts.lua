@@ -2,7 +2,7 @@
 vim.o.termguicolors = 1
 vim.cmd'colorscheme onedark'
 
--- lighline
+-- lightline
 vim.cmd([[
     let g:lightline = {
  	\ 'colorscheme': 'one',
@@ -29,14 +29,11 @@ vim.g.asciidoctor_fenced_languages = {'python', 'javascript'}
 vim.g.NERDTreeWinSize=25 -- Set default width
 vim.g.NERDTreeShowHidden = true
 
--- Start NERDTree and put the cursor back in the other window.
+-- Start NERDTree and put the cursor back in the other window
 vim.cmd('autocmd VimEnter * NERDTree | wincmd p')
 
--- Exit Vim if NERDTree is the only window remaining in the only tab.
+-- Exit Vim if NERDTree is the only window remaining in the only tab
 vim.cmd("autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif")
-
--- Open the existing NERDTree on each new tab.
---vim.cmd("autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif")
 
 -- FZF
 vim.cmd([[
