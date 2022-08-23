@@ -1,6 +1,4 @@
-# THIS IS A MINIMAL ZSHRC; ADD TO IT AS NEEDED
-
-# Where zsh lives
+# Where ZSH lives
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme

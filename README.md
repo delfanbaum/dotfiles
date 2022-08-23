@@ -1,3 +1,3 @@
 # Dotfiles
 
-A place for my dotfiles, eventually with a provisioning script!
+A place for my dotfiles.

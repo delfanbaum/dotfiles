@@ -2,7 +2,7 @@ local use = require('packer').use
 
 return require('packer').startup(function()
 
-    -- Packer can manage itself
+    -- Packer can manage itself(!)
     use 'wbthomason/packer.nvim'
 
     -- File tree things
@@ -13,7 +13,6 @@ return require('packer').startup(function()
     -- Color things
     use 'joshdick/onedark.vim'
     use 'itchyny/lightline.vim'
-    --use 'airblade/vim-gitgutter'
     use {
         'lewis6991/gitsigns.nvim',
         config = function()
@@ -38,4 +37,3 @@ return require('packer').startup(function()
     use 'junegunn/fzf.vim'
 
 end)
-

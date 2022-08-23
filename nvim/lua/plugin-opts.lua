@@ -1,14 +1,8 @@
--- theme things
-
--- start here
-
 -- colors
-
 vim.o.termguicolors = 1
 vim.cmd'colorscheme onedark'
 
 -- lighline
-
 vim.cmd([[
     let g:lightline = {
  	\ 'colorscheme': 'one',
@@ -29,11 +23,9 @@ vim.cmd([[
 ]])
 
 -- asciidoctor
-
 vim.g.asciidoctor_fenced_languages = {'python', 'javascript'}
 
 -- NERDTree
- 
 vim.g.NERDTreeWinSize=25 -- Set default width
 vim.g.NERDTreeShowHidden = true
 
@@ -47,13 +39,11 @@ vim.cmd("autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists(
 --vim.cmd("autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif")
 
 -- FZF
-
 vim.cmd([[
 "    call fzf#run({'sink': 'vsplit'})
 ]])
 
 -- ALE
-
 vim.cmd([[
     let g:ale_linters_ignore = {
         \ 'python': ['pylint', 'pyright', 'flake8']
