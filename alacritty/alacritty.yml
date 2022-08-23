@@ -1,5 +1,3 @@
-env:
-  TERM: xterm-256color
 window:
   columns: 108
   lines: 45
@@ -52,3 +50,11 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xabb2bf'
+
+key_bindings:
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       } # Skip word left
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       } # Skip word right
+  - { key: Left,     mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
+  - { key: Back,     mods: Command, chars: "\x15"                        } # Delete line
+  - { key: Back,     mods: Alt,     chars: "\x1b\x7f"                    } # Delete word
