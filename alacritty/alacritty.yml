@@ -1,4 +1,4 @@
-enf:
+env:
   TERM: xterm-256color
 window:
   columns: 108
@@ -10,7 +10,7 @@ scrolling:
 
 font:
   normal:
-    family: "iMWritingMonoS Nerd Font" 
+    family: "SauceCodePro Nerd Font"
   size: 13
   use_thin_strokes: true
 
