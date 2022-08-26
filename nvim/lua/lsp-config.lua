@@ -33,7 +33,6 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 
-    'pyright',
     'r_language_server',
     'tsserver',
     'eslint',
@@ -42,9 +41,11 @@ local servers = {
     'cssls',
     'html',
     'jsonls',
-    --'yaml-language-server',
-    'pylsp'
+    'pylsp',
+    'dockerls',
+    'solargraph',
 }
+
 -- cmp options
 -- "Add additional capabilities supported by nvim-cmp"
 local capabilities = vim.lsp.protocol.make_client_capabilities()

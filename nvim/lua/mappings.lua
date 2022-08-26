@@ -2,7 +2,7 @@ vim.api.nvim_set_keymap('','<Esc>', ':noh<CR>', { noremap = true })
 
 -- fzf and Rg
 vim.api.nvim_set_keymap('','<C-p>', ':Files<CR>', { noremap = true })
---vim.api.nvim_set_keymap('','<C- ?????? >', ':Rg<CR>', { noremap = true })
+--vim.api.nvim_set_keymap('','<C-F>', ':Rg<CR>', { noremap = true })
 
 -- text movement
 vim.api.nvim_set_keymap('','k', 'gk', { noremap = true, silent = true })
@@ -21,3 +21,7 @@ vim.api.nvim_set_keymap('','<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('','<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('','<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('','<C-l>', '<C-w>l', { noremap = true, silent = true })
+
+-- nerdtree toggle
+vim.api.nvim_set_keymap('','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>',
+                        { noremap = true, silent = true })
