@@ -3,6 +3,13 @@
 vim.o.termguicolors = 1
 vim.cmd'colorscheme onedark'
 
+-- I really miss the whole atom thing; this adds italic
+-- and bold coloring like atom used to
+vim.cmd([[
+    hi asciidoctorBold guifg=#e5c07b 
+    hi asciidoctorItalic guifg=#c678dd gui=italic
+]])
+
 -- lighline
 
 vim.cmd([[
@@ -27,6 +34,7 @@ vim.cmd([[
 -- asciidoctor
 
 vim.g.asciidoctor_fenced_languages = {'python', 'javascript'}
+
 
 -- NERDTree
  
