@@ -42,3 +42,8 @@ vim.opt.foldlevel= 99 -- reminder: use za to fold
 vim.opt.clipboard = "unnamed"
 
 vim.opt.mouse = "a"
+
+-- colors
+vim.o.termguicolors = 1
+vim.cmd'colorscheme onedark'
+

@@ -12,7 +12,12 @@ return require('packer').startup(function()
 
     -- Color things
     use 'joshdick/onedark.vim'
-    use 'itchyny/lightline.vim'
+    --use 'itchyny/lightline.vim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
     use {
         'lewis6991/gitsigns.nvim',
         config = function()

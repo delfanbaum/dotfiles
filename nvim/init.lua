@@ -1,5 +1,6 @@
 require('plugins')
-require('plugin-opts')
+require('misc-plugin-opts')
+require('lualine-opts')
 require('settings')
 require('mappings')
 require('lsp-config')
