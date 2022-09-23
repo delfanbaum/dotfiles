@@ -44,7 +44,7 @@ hi SpellCap cterm=underline
 hi clear LineNr
 hi LineNr ctermfg=darkgrey
 
-" key mappings
+" key mappings for movement
 noremap <silent> 0 g0
 noremap <silent> $ g$
 nnoremap j gj
@@ -57,3 +57,9 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+
+" key mappings for pairings
+inoremap " ""<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
