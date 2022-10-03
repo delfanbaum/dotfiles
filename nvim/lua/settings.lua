@@ -8,6 +8,7 @@ vim.cmd([[
 
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us' -- spelling is good!
+vim.opt.spellsuggest = 'best,5' -- spelling is good!
 vim.opt.number = true -- add line numbers
 vim.opt.encoding = 'utf-8'
 vim.opt.backup = false -- no backup file; 
