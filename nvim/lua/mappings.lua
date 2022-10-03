@@ -25,11 +25,3 @@ vim.api.nvim_set_keymap('','<C-l>', '<C-w>l', { noremap = true, silent = true })
 -- nerdtree toggle
 vim.api.nvim_set_keymap('','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>',
                         { noremap = true, silent = true })
-
--- auto close things everywhere
-vim.api.nvim_set_keymap('i', '"', '""<left>', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true, silent = true})
--- don't set this for now, because this is a PITA when writing text with apostrophes
--- vim.api.nvim_set_keymap('i', "'", "''<left>", { noremap = true, silent = true})
