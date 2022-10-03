@@ -34,7 +34,7 @@ set wrap
 set linebreak
 
 " color things
-set t_co=256
+set t_co=16
 
 hi clear SpellBad
 hi clear SpellCap
@@ -58,8 +58,7 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
-" key mappings for pairings
-inoremap " ""<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+" cursor on insert
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
