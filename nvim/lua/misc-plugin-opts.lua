@@ -7,6 +7,7 @@ vim.g.asciidoctor_fenced_languages = {'python', 'javascript'}
 vim.cmd([[
     hi asciidoctorBold guifg=#e5c07b 
     hi asciidoctorItalic guifg=#c678dd gui=italic
+    autocmd FileType asciidoctor syntax spell toplevel " to get over a bug
 ]])
 
 
