@@ -62,3 +62,9 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+
+" begin non-minimal elements
+call plug#begin()
+Plug 'https://github.com/rhysd/committia.vim'
+call plug#end()
+
