@@ -42,7 +42,7 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldlevel= 99 -- reminder: use za to fold
 vim.opt.clipboard = "unnamed"
 
-vim.opt.mouse = "a"
+vim.opt.mouse = "n"
 
 -- colors
 vim.o.termguicolors = 1
