@@ -1,5 +1,4 @@
 -- asciidoctor
-
 vim.g.asciidoctor_fenced_languages = {'python', 'javascript'}
 
 -- I really miss the whole atom thing; this adds italic
@@ -12,7 +11,6 @@ vim.cmd([[
 
 
 -- NERDTree
- 
 vim.g.NERDTreeWinSize=25 -- Set default width
 vim.g.NERDTreeShowHidden = true
 
@@ -25,3 +23,6 @@ vim.cmd([[
 "    call fzf#run({'sink': 'vsplit'})
 ]])
 
+
+-- Setup gitsigns
+require('gitsigns').setup()

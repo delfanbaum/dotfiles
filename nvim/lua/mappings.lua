@@ -1,8 +1,7 @@
 vim.api.nvim_set_keymap('','<Esc>', ':noh<CR>', { noremap = true })
 
--- fzf and Rg
+-- fzf 
 vim.api.nvim_set_keymap('','<C-p>', ':Files<CR>', { noremap = true })
---vim.api.nvim_set_keymap('','<C-F>', ':Rg<CR>', { noremap = true })
 
 -- text movement
 vim.api.nvim_set_keymap('','k', 'gk', { noremap = true, silent = true })

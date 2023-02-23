@@ -3,7 +3,7 @@ HOME = os.getenv("HOME")
 -- vim stuff
 vim.cmd([[ 
     :command W w
-    syntax on 
+    syntax on
 ]])
 
 vim.opt.spell = true
@@ -46,5 +46,7 @@ vim.opt.mouse = "n"
 
 -- colors
 vim.o.termguicolors = 1
-vim.cmd'colorscheme onedark'
+
+require('onedark').load()
+
 
