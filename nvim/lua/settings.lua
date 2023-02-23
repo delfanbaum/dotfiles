@@ -46,7 +46,4 @@ vim.opt.mouse = "n"
 
 -- colors
 vim.o.termguicolors = 1
-
-require('onedark').load()
-
-
+vim.cmd'colorscheme onedark'

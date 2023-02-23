@@ -21,7 +21,7 @@ return require('packer').startup(function()
     use {'ryanoasis/vim-devicons', opt = true, cmd = {'Nerdtree', 'NERDTreeToggle'}}
 
     -- Color things
-    use 'navarasu/onedark.nvim'
+    use 'joshdick/onedark.vim'
 
     use {
         'nvim-lualine/lualine.nvim',
