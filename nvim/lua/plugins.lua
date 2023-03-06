@@ -37,6 +37,42 @@ return require('packer').startup(function()
          ft = {'asciidoc'}
     }
 
+    -- "Focus mode" things
+    use {
+      "folke/zen-mode.nvim",
+      config = function()
+        require("zen-mode").setup {
+            window = {
+                backdrop = 1,
+                width = 100,
+                options = {
+                    number = false,
+                    relativenumber = false
+                }
+            },
+            plugins = {
+                gitsigns = { enabled = true },
+                tmux = { enabled = true },
+            },
+            on_open = function(win)
+                vim.o.scrolloff = 999
+            end,
+            on_close = function()
+                vim.o.scrolloff = 5
+            end
+        }
+      end
+    }
+
+    use {
+      "folke/twilight.nvim",
+      config = function()
+        require("twilight").setup {
+            context = 2
+        }
+      end
+    }
+
     -- Programming things
     use { 'neovim/nvim-lspconfig' } 
     use { 'hrsh7th/nvim-cmp' } -- Autocompletion plugin

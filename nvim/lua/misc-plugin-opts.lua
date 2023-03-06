@@ -9,7 +9,6 @@ vim.cmd([[
     autocmd FileType asciidoctor syntax spell toplevel " to get over a bug
 ]])
 
-
 -- NERDTree
 vim.g.NERDTreeWinSize=25 -- Set default width
 vim.g.NERDTreeShowHidden = true
