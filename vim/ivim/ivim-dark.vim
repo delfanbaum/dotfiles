@@ -82,4 +82,7 @@ hi SpellBad guifg=#e06c75 guibg=NONE
 hi SpellCap guifg=#d19a66 guibg=NONE
 hi SpellRare guifg=#d19a66 guibg=NONE
 
-hi asciidocQuoteEmphasized guifg=#c678dd
+hi asciidocOneLineTitle guifg=#98c379
+hi asciidocQuotedEmphasized guifg=#c678dd 
+hi asciidocQuotedMonospaced guifg=#56b6c2
+hi asciidocQuotedMonospaced2 guifg=#56b6c2
