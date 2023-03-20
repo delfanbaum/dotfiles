@@ -74,3 +74,6 @@ hi StatusLineNC gui=NONE guibg=#1c1c1e guifg=#d1d1d6
 hi Search guibg=#8e8e93 guifg=#d1d1d6
 hi VertSplit gui=NONE guifg=#454545 guibg=NONE
 hi Visual gui=NONE guibg=#454545
+
+hi SpellBad guifg=#ff453a
+hi SpellCap guifg=#ffd60a
