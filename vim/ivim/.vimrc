@@ -1,5 +1,7 @@
 " minimal vimrc for ivim, assumes ivim-dark has been added to .vim/colors
 
+ifont set -s 15
+
 " environment defaults
 syntax on
 set nocompatible
@@ -54,3 +56,8 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+
+" Output the current syntax group
+nnoremap <C-I> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
