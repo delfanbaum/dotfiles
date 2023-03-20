@@ -1,7 +1,4 @@
 hi clear
-hi clear SpellBad  " Not sure why necessary, but :shrug:
-hi clear SpellCap  " Not sure why necessary, but :shrug:
-hi clear SpellRare  " Not sure why necessary, but :shrug:
 syntax reset
 let g:colors_name = "ivim-dark"
 set background=dark
@@ -86,3 +83,8 @@ hi asciidocOneLineTitle guifg=#98c379
 hi asciidocQuotedEmphasized guifg=#c678dd 
 hi asciidocQuotedMonospaced guifg=#56b6c2
 hi asciidocQuotedMonospaced2 guifg=#56b6c2
+hi asciidocBlockTitle guifg=#c678dd 
+hi asciidocAttributeList guifg=#e5c07b
+hi asciidocSidebarDelimiter guifg=#e5c07b
+hi asciidocQuoteBlockDelimiter guifg=#e5c07b
+hi asciidocListingBlock guifg=#56b6c2
