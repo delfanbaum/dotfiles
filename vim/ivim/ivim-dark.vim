@@ -80,7 +80,7 @@ hi SpellCap guifg=#d19a66 guibg=NONE
 hi SpellRare guifg=#d19a66 guibg=NONE
 
 hi asciidocOneLineTitle guifg=#98c379
-hi asciidocQuotedEmphasized guifg=#c678dd 
+hi asciidocQuotedEmphasized guifg=#c678dd gui=italic
 hi asciidocQuotedMonospaced guifg=#56b6c2
 hi asciidocQuotedMonospaced2 guifg=#56b6c2
 hi asciidocBlockTitle guifg=#c678dd 
