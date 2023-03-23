@@ -1,4 +1,5 @@
 window:
+  title: Alacritty
   decorations: buttonless
   dynamic_title: false
   dimensions:
@@ -16,7 +17,7 @@ font:
   normal:
     family: "SauceCodePro Nerd Font"
   size: 13
-  use_thin_strokes: true
+  AppleFontSmoothing: true
 
 # Colors (One Dark)
 colors:
