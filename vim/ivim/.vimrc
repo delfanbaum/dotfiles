@@ -33,6 +33,7 @@ noremap <CR> :noh<CR><CR>
 " prose
 set spell
 set spelllang=en_us
+set spellsuggest=best,5
 set wrap
 set linebreak
 
