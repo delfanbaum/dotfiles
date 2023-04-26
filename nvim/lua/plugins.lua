@@ -53,6 +53,7 @@ return require('packer').startup(function()
             plugins = {
                 gitsigns = { enabled = true },
                 tmux = { enabled = true },
+                twilight = { enabled = false }
             },
             on_open = function(win)
                 vim.o.scrolloff = 999
