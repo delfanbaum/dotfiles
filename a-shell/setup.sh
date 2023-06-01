@@ -6,14 +6,14 @@ config -k beam -p  # cursor as beam
 echo "Setting up vim..."
 cp .vimrc ~/Documents/.vimrc
 
-packages=("joshdick/onedark.vim" "tpope/vim-surround" "junegunn/goyo.vim" "habamax/vim-asciidoctor")
+vim_packages="joshdick/onedark.vim tpope/vim-surround junegunn/goyo.vim habamax/vim-asciidoctor"
 
-mkdir -p .vim/pack/vendor/start
+mkdir -p ~/Documents/.vim/pack/vendor/start
 
-for p in ${packages[@]}; do
+for p in ${vim_packages}; do
     echo "Installing $p..."
     path=${p##*/}
-    lg2 clone --depth 1 https://github.com/$p ~/Documents/.vim/pack/vendor/start/$path
+    lg2 clone https://github.com/$p ~/Documents/.vim/pack/vendor/start/$path
 done
 
 echo "All set!"

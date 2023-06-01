@@ -39,6 +39,7 @@ set linebreak
 
 " color things
 colorscheme onedark
+set termguicolors
 
 " cursor on insert
 let &t_SI = "\e[6 q"
