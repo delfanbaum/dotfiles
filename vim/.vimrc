@@ -7,7 +7,7 @@ set number
 set encoding=utf-8
 set splitright
 set splitbelow
-set scrolloff=3
+set scrolloff=5
 set clipboard=unnamed
 
 " tab things
@@ -21,6 +21,8 @@ set autoindent
 set ignorecase
 set smartcase
 set hlsearch
+set wrapscan
+set mouse=nv
 
 " escape clear search
 noremap <CR> :noh<CR><CR> 
@@ -31,23 +33,25 @@ noremap <CR> :noh<CR><CR>
 " prose
 set spell
 set spelllang=en
+set spellsuggest=best,5
 set wrap
 set linebreak
 
 " color things
-set t_co=16
-
+set termguicolors
+hi clear LineNr
 hi clear SpellBad
 hi clear SpellCap
+hi LineNr ctermfg=darkgrey
 hi SpellBad cterm=underline ctermfg=red
 hi SpellCap cterm=underline 
-
-hi clear LineNr
-hi LineNr ctermfg=darkgrey
 
 " cursor on insert
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+" backspace because... 
+set backspace=indent,eol,start
 
 " key mappings for movement
 noremap <silent> 0 g0
@@ -67,4 +71,3 @@ inoremap <Up> <C-o>gk
 " call plug#begin()
 " Plug 'https://github.com/rhysd/committia.vim'
 " call plug#end()
-

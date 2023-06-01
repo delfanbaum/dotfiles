@@ -49,6 +49,9 @@ autocmd FileType asciidoctor syntax spell toplevel " to get over a bug
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+" backspace because... 
+set backspace=indent,eol,start
+
 " key mappings for movement
 noremap <silent> 0 g0
 noremap <silent> $ g$
