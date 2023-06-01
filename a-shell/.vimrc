@@ -1,6 +1,4 @@
-" minimal vimrc for ivim, assumes ivim-dark has been added to .vim/colors
-
-ifont set -s 15
+" vimrc for a-shell (and mini)
 
 " environment defaults
 syntax on
@@ -9,7 +7,7 @@ set number
 set encoding=utf-8
 set splitright
 set splitbelow
-set scrolloff=3
+set scrolloff=5
 set clipboard=unnamed
 
 " tab things
@@ -23,6 +21,8 @@ set autoindent
 set ignorecase
 set smartcase
 set hlsearch
+set wrapscan
+set mouse=nv
 
 " escape clear search
 noremap <CR> :noh<CR><CR> 
@@ -32,13 +32,13 @@ noremap <CR> :noh<CR><CR>
 
 " prose
 set spell
-set spelllang=en_us
+set spelllang=en
 set spellsuggest=best,5
 set wrap
 set linebreak
 
 " color things
-colorscheme ivim-dark
+colorscheme onedark
 
 " cursor on insert
 let &t_SI = "\e[6 q"
