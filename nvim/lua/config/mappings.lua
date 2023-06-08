@@ -1,3 +1,7 @@
+-- leader
+vim.g.mapleader = ','
+
+-- remove highlight
 vim.api.nvim_set_keymap('','<Esc>', ':noh<CR>', { noremap = true })
 
 -- fzf 
@@ -24,3 +28,12 @@ vim.api.nvim_set_keymap('','<C-l>', '<C-w>l', { noremap = true, silent = true })
 -- nerdtree toggle
 vim.api.nvim_set_keymap('','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>',
                         { noremap = true, silent = true })
+
+
+-- vim.cmd([[
+-- " Output the current syntax group
+-- nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+-- \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+-- \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+-- ]])
+

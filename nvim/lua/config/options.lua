@@ -11,6 +11,7 @@ vim.opt.spelllang = 'en_us' -- spelling is good!
 vim.opt.spellsuggest = 'best,5' -- spelling is good!
 vim.opt.number = true -- add line numbers
 vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = 'utf-8'
 vim.opt.backup = false -- no backup file; 
 vim.opt.swapfile = false -- no swap file;
                    -- because I don't really think that way
@@ -18,7 +19,6 @@ vim.opt.swapfile = false -- no swap file;
                    -- all the errors and so on at present.
 
 vim.opt.splitright = true -- splits to right instead of left like 
-                   -- that --other-- editor I used
 vim.opt.splitbelow = true -- ditto 
 
 vim.opt.scrolloff = 5 -- show some lines at the bottom
@@ -46,4 +46,4 @@ vim.opt.mouse = "nv"
 
 -- colors
 vim.o.termguicolors = 1
-vim.cmd'colorscheme onedark'
+vim.cmd  [[colorscheme onedark]]
