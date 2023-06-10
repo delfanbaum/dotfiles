@@ -1,4 +1,6 @@
-nvim/spell
+# Ignore the compiled plugin directory
 nvim/plugin
+
+# Ignore any secrets
 .env
 .secrets

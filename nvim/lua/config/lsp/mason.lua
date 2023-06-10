@@ -4,6 +4,7 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+    --"lua-ls" -- I don't know why this doesn't work and it's a bummer.
 }
 
 local settings = {
@@ -28,6 +29,10 @@ mason.setup(settings)
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
+    registries = {
+        "github:mason-org/mason-registry",
+        "lua:mason-registry.index"
+      }
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")

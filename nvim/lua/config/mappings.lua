@@ -1,5 +1,5 @@
--- leader
-vim.g.mapleader = ','
+-- space leader (pun intended)
+vim.g.mapleader = ' '
 
 -- remove highlight
 vim.api.nvim_set_keymap('','<Esc>', ':noh<CR>', { noremap = true })
@@ -30,10 +30,26 @@ vim.api.nvim_set_keymap('','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>',
                         { noremap = true, silent = true })
 
 
--- vim.cmd([[
--- " Output the current syntax group
--- nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
--- \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
--- \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
--- ]])
+-- Output the current syntax group for highlighting purposes
+vim.cmd([[
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+]])
 
+-- too lazy to install which-key, so
+local dapopts = {}
+vim.api.nvim_set_keymap('n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<cr>",  dapopts)
+vim.api.nvim_set_keymap('n', '<leader>db', "<cmd>lua require'dap'.step_back()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dc', "<cmd>lua require'dap'.continue()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dC', "<cmd>lua require'dap'.run_to_cursor()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dd', "<cmd>lua require'dap'.disconnect()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dg', "<cmd>lua require'dap'.session()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>di', "<cmd>lua require'dap'.step_into()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>do', "<cmd>lua require'dap'.step_over()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>du', "<cmd>lua require'dap'.step_out()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dp', "<cmd>lua require'dap'.pause()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dr', "<cmd>lua require'dap'.repl.toggle()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>ds', "<cmd>lua require'dap'.continue()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dq', "<cmd>lua require'dap'.close()<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true)<cr>", dapopts)
