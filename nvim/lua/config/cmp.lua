@@ -128,3 +128,7 @@ cmp.setup {
     native_menu = false,
   },
 }
+
+-- disable text filetypes because prose
+disable_completion_fts = {'asciidoc', 'asciidoctor', 'text', 'markdown'}
+cmp.setup.filetype(disable_completion_fts, { enabled = false })
