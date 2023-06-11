@@ -15,9 +15,13 @@ scrolling:
 
 font:
   normal:
-    family: "SauceCodePro Nerd Font"
+    family: "SauceCodePro Nerd Font Propo"
+    style: "Regular"
+  bold:
+    style: "Medium"
+  italic:
+    style: "Italic"
   size: 13
-  AppleFontSmoothing: true
 
 # Colors (One Dark)
 colors:
