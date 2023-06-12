@@ -42,7 +42,7 @@ set termguicolors
 
 colorscheme onedark
 hi asciidoctorBold guifg=#e5c07b 
-hi asciidoctorItalic guifg=#c678dd gui=italic
+hi asciidoctorItalic guifg=#c678dd gui=italic cterm=italic
 autocmd FileType asciidoctor syntax spell toplevel " to get over a bug
 
 " cursor on insert
