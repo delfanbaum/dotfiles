@@ -5,5 +5,8 @@ nvim/plugin
 .env
 .secrets
 
+# Ignore troubleshooting logs
+**/*log
+
 # Ignore Apple nonsenese
 **/*.DS_Store
