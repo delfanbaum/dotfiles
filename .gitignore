@@ -4,3 +4,6 @@ nvim/plugin
 # Ignore any secrets
 .env
 .secrets
+
+# Ignore Apple nonsenese
+**/*.DS_Store
