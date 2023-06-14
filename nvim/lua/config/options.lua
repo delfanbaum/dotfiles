@@ -1,11 +1,5 @@
 HOME = os.getenv("HOME")
 
--- vim stuff
-vim.cmd([[ 
-    :command W w
-    syntax on
-]])
-
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us' -- spelling is good!
 vim.opt.spellsuggest = 'best,5' -- spelling is good!
@@ -47,3 +41,6 @@ vim.opt.mouse = "nv"
 -- colors
 vim.o.termguicolors = 1
 vim.cmd  [[colorscheme onedark]]
+
+-- vim stuff
+vim.cmd [[:command W w]]

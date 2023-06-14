@@ -98,7 +98,7 @@ return require('packer').startup(function()
         {
           "microsoft/vscode-js-debug",
           opt = true,
-          run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" 
+          run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
         },
       },
       config = function()

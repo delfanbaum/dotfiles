@@ -17,7 +17,7 @@ zenmode.setup {
         tmux = { enabled = true },
         twilight = { enabled = false }
     },
-    on_open = function(win)
+    on_open = function()
         vim.o.scrolloff = 999
     end,
     on_close = function()

@@ -50,6 +50,11 @@ for _, server in pairs(installed_servers) do
 	opts = {
 		on_attach = require("config.lsp.handlers").on_attach,
 		capabilities = require("config.lsp.handlers").capabilities,
+        settings = {
+            Lua = { -- hide all those annoying "undefined global" messages
+                diagnostics = { globals = {"vim"}}
+            }
+        }
 	}
 
 	server = vim.split(server, "@")[1]

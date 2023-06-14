@@ -1,4 +1,3 @@
--- NERDTree
 vim.g.NERDTreeWinSize=25 -- Set default width
 vim.g.NERDTreeShowHidden = true
 
