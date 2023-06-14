@@ -1,0 +1,3 @@
+[submodule "nvim/spell"]
+	path = nvim/spell
+	url = git@github.com:delfanbaum/spell.git

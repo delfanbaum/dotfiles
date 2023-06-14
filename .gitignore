@@ -1,4 +1,12 @@
-nvim/spell
+# Ignore the compiled plugin directory
 nvim/plugin
+
+# Ignore any secrets
 .env
 .secrets
+
+# Ignore troubleshooting logs
+**/*log
+
+# Ignore Apple nonsenese
+**/*.DS_Store
