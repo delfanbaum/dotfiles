@@ -1,65 +1,67 @@
--- space leader (pun intended)
-vim.g.mapleader = ' '
-local noopts = {}
+vim.g.mapleader = ' ' -- space leader
 
--- remove highlight
-vim.api.nvim_set_keymap('','<Esc>', ':noh<CR>', { noremap = true })
+-- option defaults
+local empty = {}
+local noremap = { noremap = true}
+local noremap_silent = { noremap = true, silent = true}
 
--- fzf 
-vim.api.nvim_set_keymap('','<C-p>', ':Files<CR>', { noremap = true })
+-- mappings
+local maps = {
+    -- Remove highlight
+    {'','<Esc>', ':noh<CR>', noremap},
 
--- text movement
-vim.api.nvim_set_keymap('','k', 'gk', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','<Up>', 'gk', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i','<Up>', '<C-o>gk', 
-                        { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','j', 'gj', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','<Down>', 'gj', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i','<Down>', '<C-o>gj', 
-                        { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','0', 'g0', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','$', 'g$', { noremap = true, silent = true })
+    -- Text movement
+    {'','k', 'gk', noremap_silent},
+    {'','<Up>', 'gk', noremap_silent},
+    {'i','<Up>', '<C-o>gk', noremap_silent},
+    {'','j', 'gj', noremap_silent},
+    {'','<Down>', 'gj', noremap_silent},
+    {'i','<Down>', '<C-o>gj', noremap_silent},
+    {'','0', 'g0', noremap_silent},
+    {'','$', 'g$', noremap_silent},
 
--- window movement
-vim.api.nvim_set_keymap('','<C-h>', '<C-w>h', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','<C-j>', '<C-w>j', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','<C-k>', '<C-w>k', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('','<C-l>', '<C-w>l', { noremap = true, silent = true })
+    -- Window movement
+    {'','<C-h>', '<C-w>h', noremap_silent},
+    {'','<C-j>', '<C-w>j', noremap_silent},
+    {'','<C-k>', '<C-w>k', noremap_silent},
+    {'','<C-l>', '<C-w>l', noremap_silent},
 
--- nerdtree toggle
-vim.api.nvim_set_keymap('','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>',
-                        { noremap = true, silent = true })
+    -- Nerdtree
+    {'','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>', noremap_silent},
 
--- Output the current syntax group for highlighting purposes
-vim.cmd([[
-nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
-]])
+    -- fzf
+    {'','<C-p>', ':Files<CR>', noremap},
 
+    -- Dap
+    {'n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<cr>",  empty},
+    {'n', '<leader>db', "<cmd>lua require'dap'.step_back()<cr>", empty},
+    {'n', '<leader>dc', "<cmd>lua require'dap'.continue()<cr>", empty},
+    {'n', '<leader>dC', "<cmd>lua require'dap'.run_to_cursor()<cr>", empty},
+    {'n', '<leader>dd', "<cmd>lua require'dap'.disconnect()<cr>", empty},
+    {'n', '<leader>dg', "<cmd>lua require'dap'.session()<cr>", empty},
+    {'n', '<leader>di', "<cmd>lua require'dap'.step_into()<cr>", empty},
+    {'n', '<leader>do', "<cmd>lua require'dap'.step_over()<cr>", empty},
+    {'n', '<leader>du', "<cmd>lua require'dap'.step_out()<cr>", empty},
+    {'n', '<leader>dp', "<cmd>lua require'dap'.pause()<cr>", empty},
+    {'n', '<leader>dr', "<cmd>lua require'dap'.repl.toggle()<cr>", empty},
+    {'n', '<leader>ds', "<cmd>lua require'dap'.continue()<cr>", empty},
+    {'n', '<leader>dq', "<cmd>lua require'dap'.close()<cr>", empty},
+    {'n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true})<cr>", empty},
 
--- too lazy to install which-key, so
-vim.api.nvim_set_keymap('n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<cr>",  noopts)
-vim.api.nvim_set_keymap('n', '<leader>db', "<cmd>lua require'dap'.step_back()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dc', "<cmd>lua require'dap'.continue()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dC', "<cmd>lua require'dap'.run_to_cursor()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dd', "<cmd>lua require'dap'.disconnect()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dg', "<cmd>lua require'dap'.session()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>di', "<cmd>lua require'dap'.step_into()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>do', "<cmd>lua require'dap'.step_over()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>du', "<cmd>lua require'dap'.step_out()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dp', "<cmd>lua require'dap'.pause()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dr', "<cmd>lua require'dap'.repl.toggle()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>ds', "<cmd>lua require'dap'.continue()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dq', "<cmd>lua require'dap'.close()<cr>", noopts)
-vim.api.nvim_set_keymap('n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true})<cr>", noopts)
+    -- Neotest
+    {'n', '<leader>tr', "<cmd>lua require('neotest').run.run()<cr>", empty},
+    {'n', '<leader>tf', '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', empty},
+    {'n', '<leader>td', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", empty},
+    {'n', '<leader>ti', "<cmd>lua require('neotest').output.open({enter = true})<cr>", empty},
+}
 
--- Neotest
--- Nearest test
-vim.api.nvim_set_keymap('n', '<leader>tr', "<cmd>lua require('neotest').run.run()<cr>", noopts)
--- Current file
-vim.api.nvim_set_keymap('n', '<leader>tf', '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', noopts)
--- Debug nearest
-vim.api.nvim_set_keymap('n', '<leader>td', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", noopts)
--- Inspect failure
-vim.api.nvim_set_keymap('n', '<leader>ti', "<cmd>lua require('neotest').output.open({enter = true})<cr>", noopts)
+for _, map in pairs(maps) do
+    vim.api.nvim_set_keymap(map[1], map[2], map[3], map[4])
+end
+
+-- Helper for outputting the current syntax group for highlighting purposes
+-- vim.cmd([[
+-- nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+-- \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+-- \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+-- ]])
