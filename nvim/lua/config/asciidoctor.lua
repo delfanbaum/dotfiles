@@ -1,7 +1,10 @@
 -- asciidoctor opts
 vim.g.asciidoctor_fenced_languages = {
     'python',
-    'javascript'
+    'javascript',
+    'lua',
+    'bash',
+    'c'
 }
 
 -- Add italic and bold coloring (like atom used to :'-)) 
