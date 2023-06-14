@@ -16,7 +16,9 @@ local ensure_install = {
     "yaml",
     "ruby",
     "markdown",
-    "markdown_inline"
+    "markdown_inline",
+    "glimmer",
+    "regex"
 }
 
 configs.setup({

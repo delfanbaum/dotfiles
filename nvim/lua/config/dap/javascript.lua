@@ -7,7 +7,8 @@ function M.setup()
     node_path = "node",
     debugger_path = DEBUGGER_PATH,
     -- debugger_cmd = { "js-debug-adapter" },
-    adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
+    -- which adapters to register in nvim-dap
+    adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, 
   }
 
   for _, language in ipairs { "typescript", "javascript" } do
@@ -15,7 +16,7 @@ function M.setup()
       {
         type = "pwa-node",
         request = "launch",
-        name = "Launch file",
+        name = "Launch Program",
         program = "${file}",
         cwd = "${workspaceFolder}",
       },
@@ -41,6 +42,7 @@ function M.setup()
         console = "integratedTerminal",
         internalConsoleOptions = "neverOpen",
       },
+      "node-terminal"
     }
   end
 end

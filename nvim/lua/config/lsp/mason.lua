@@ -4,6 +4,8 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+    "glint",
+    "tailwindcss"
     --"lua-ls" -- I don't know why this doesn't work and it's a bummer.
 }
 

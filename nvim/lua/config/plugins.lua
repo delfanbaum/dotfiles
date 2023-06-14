@@ -49,13 +49,13 @@ return require('packer').startup(function()
 
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter' }
+    use 'Glench/Vim-Jinja2-Syntax' -- at least until I can find a better treesitter one
 
     -- Search things
     use 'junegunn/fzf'
     use 'junegunn/fzf.vim'
 
     -- Debugger
-    -- p
     use "theHamsta/nvim-dap-virtual-text"
     use "rcarriga/nvim-dap-ui"
     use "mfussenegger/nvim-dap-python"

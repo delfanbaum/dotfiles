@@ -29,7 +29,6 @@ vim.api.nvim_set_keymap('','<C-l>', '<C-w>l', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>',
                         { noremap = true, silent = true })
 
-
 -- Output the current syntax group for highlighting purposes
 vim.cmd([[
 nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
@@ -52,4 +51,4 @@ vim.api.nvim_set_keymap('n', '<leader>dp', "<cmd>lua require'dap'.pause()<cr>", 
 vim.api.nvim_set_keymap('n', '<leader>dr', "<cmd>lua require'dap'.repl.toggle()<cr>", dapopts)
 vim.api.nvim_set_keymap('n', '<leader>ds', "<cmd>lua require'dap'.continue()<cr>", dapopts)
 vim.api.nvim_set_keymap('n', '<leader>dq', "<cmd>lua require'dap'.close()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true)<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true})<cr>", dapopts)

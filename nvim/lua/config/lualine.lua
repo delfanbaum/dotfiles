@@ -7,7 +7,7 @@ lualine.setup {
   options = {
       icons_enables = true,
       theme = 'onedark',
-      globalstatus = true,
+      -- globalstatus = true,
       component_separators = {
           left = '|',
           right = '|'
