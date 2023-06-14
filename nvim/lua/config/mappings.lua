@@ -1,3 +1,5 @@
+local table = require('table')
+
 vim.g.mapleader = ' ' -- space leader
 
 -- option defaults
@@ -55,8 +57,11 @@ local maps = {
     {'n', '<leader>ti', "<cmd>lua require('neotest').output.open({enter = true})<cr>", empty},
 }
 
+-- workaround for Lua versions, just ignore the warning
+table.unpack = table.unpack or unpack
+
 for _, map in pairs(maps) do
-    vim.api.nvim_set_keymap(map[1], map[2], map[3], map[4])
+    vim.api.nvim_set_keymap(table.unpack(map))
 end
 
 -- Helper for outputting the current syntax group for highlighting purposes
