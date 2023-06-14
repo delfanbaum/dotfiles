@@ -1,12 +1,11 @@
-local servers = {
-	"tsserver",
+local servers = { -- "ensure installed" list
 	"pyright",
+	"tsserver",
 	"bashls",
 	"jsonls",
 	"yamlls",
     "glint",
-    "tailwindcss"
-    --"lua-ls" -- I don't know why this doesn't work and it's a bummer.
+    "tailwindcss",
 }
 
 local settings = {
@@ -28,7 +27,9 @@ if not status_ok then
 end
 
 mason.setup(settings)
-require("mason-lspconfig").setup({
+
+local mason_lspconfig = require("mason-lspconfig")
+mason_lspconfig.setup({
 	ensure_installed = servers,
 	automatic_installation = true,
     registries = {
@@ -43,8 +44,9 @@ if not lspconfig_status_ok then
 end
 
 local opts = {}
+local installed_servers = mason_lspconfig.get_installed_servers()
 
-for _, server in pairs(servers) do
+for _, server in pairs(installed_servers) do
 	opts = {
 		on_attach = require("config.lsp.handlers").on_attach,
 		capabilities = require("config.lsp.handlers").capabilities,
