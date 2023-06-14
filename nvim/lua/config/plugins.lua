@@ -42,6 +42,13 @@ return require('packer').startup(function()
     use { 'hrsh7th/cmp-cmdline' }
     use { 'saadparwaiz1/cmp_luasnip' }
 
+    -- Linting, formatting
+    use {'jose-elias-alvarez/null-ls.nvim',
+            requires = {
+                "nvim-lua/plenary.nvim"
+            }
+        }
+
     -- Snippets
     use { 'L3MON4D3/LuaSnip' }
     use { 'rafamadriz/friendly-snippets' }
@@ -55,10 +62,27 @@ return require('packer').startup(function()
     use 'junegunn/fzf'
     use 'junegunn/fzf.vim'
 
+    -- Test runner
+    use {
+      "nvim-neotest/neotest",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-neotest/neotest-python",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim"
+      }
+    }
+
     -- Debugger
-    use "theHamsta/nvim-dap-virtual-text"
-    use "rcarriga/nvim-dap-ui"
-    use "mfussenegger/nvim-dap-python"
+    use {
+        "mfussenegger/nvim-dap-python",
+        module = { "dap-python" },
+        requires = {
+            "theHamsta/nvim-dap-virtual-text",
+            "rcarriga/nvim-dap-ui",
+            "nvim-telescope/telescope-dap.nvim",
+        }
+    }
 
     use {
       "mfussenegger/nvim-dap",
@@ -69,7 +93,6 @@ return require('packer').startup(function()
         "rcarriga/nvim-dap-ui",
         "mfussenegger/nvim-dap-python",
         "nvim-telescope/telescope-dap.nvim",
-        { "leoluz/nvim-dap-go", module = "dap-go" },
         { "jbyuki/one-small-step-for-vimkind", module = "osv" },
         { "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
         {

@@ -1,5 +1,6 @@
 -- space leader (pun intended)
 vim.g.mapleader = ' '
+local noopts = {}
 
 -- remove highlight
 vim.api.nvim_set_keymap('','<Esc>', ':noh<CR>', { noremap = true })
@@ -36,19 +37,29 @@ nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
 ]])
 
+
 -- too lazy to install which-key, so
-local dapopts = {}
-vim.api.nvim_set_keymap('n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<cr>",  dapopts)
-vim.api.nvim_set_keymap('n', '<leader>db', "<cmd>lua require'dap'.step_back()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dc', "<cmd>lua require'dap'.continue()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dC', "<cmd>lua require'dap'.run_to_cursor()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dd', "<cmd>lua require'dap'.disconnect()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dg', "<cmd>lua require'dap'.session()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>di', "<cmd>lua require'dap'.step_into()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>do', "<cmd>lua require'dap'.step_over()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>du', "<cmd>lua require'dap'.step_out()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dp', "<cmd>lua require'dap'.pause()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dr', "<cmd>lua require'dap'.repl.toggle()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>ds', "<cmd>lua require'dap'.continue()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dq', "<cmd>lua require'dap'.close()<cr>", dapopts)
-vim.api.nvim_set_keymap('n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true})<cr>", dapopts)
+vim.api.nvim_set_keymap('n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<cr>",  noopts)
+vim.api.nvim_set_keymap('n', '<leader>db', "<cmd>lua require'dap'.step_back()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dc', "<cmd>lua require'dap'.continue()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dC', "<cmd>lua require'dap'.run_to_cursor()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dd', "<cmd>lua require'dap'.disconnect()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dg', "<cmd>lua require'dap'.session()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>di', "<cmd>lua require'dap'.step_into()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>do', "<cmd>lua require'dap'.step_over()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>du', "<cmd>lua require'dap'.step_out()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dp', "<cmd>lua require'dap'.pause()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dr', "<cmd>lua require'dap'.repl.toggle()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>ds', "<cmd>lua require'dap'.continue()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dq', "<cmd>lua require'dap'.close()<cr>", noopts)
+vim.api.nvim_set_keymap('n', '<leader>dU', "<cmd>lua require'dapui'.toggle({reset = true})<cr>", noopts)
+
+-- Neotest
+-- Nearest test
+vim.api.nvim_set_keymap('n', '<leader>tr', "<cmd>lua require('neotest').run.run()<cr>", noopts)
+-- Current file
+vim.api.nvim_set_keymap('n', '<leader>tf', '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', noopts)
+-- Debug nearest
+vim.api.nvim_set_keymap('n', '<leader>td', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", noopts)
+-- Inspect failure
+vim.api.nvim_set_keymap('n', '<leader>ti', "<cmd>lua require('neotest').output.open({enter = true})<cr>", noopts)
