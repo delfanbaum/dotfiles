@@ -1,6 +1,5 @@
-local table = require('table')
-
-vim.g.mapleader = ' ' -- space leader
+-- set leader to space
+vim.g.mapleader = ' '
 
 -- option defaults
 local empty = {}
