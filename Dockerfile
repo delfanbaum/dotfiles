@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-# install some general tooling
+# install general tooling
 RUN apk --no-cache add \
     git \
     make \
@@ -12,34 +12,21 @@ RUN apk --no-cache add \
     fzf \
     ripgrep \ 
     vim \ 
-    neovim
+    neovim \
+    && sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
-# install omzsh
-RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+# copy over dotfiles, export env variable so we know we're in docker at the CLI
+RUN git clone https://github.com/delfanbaum/dotfiles.git ~/.config && \ 
+    cp -v ~/.config/vim/.vimrc ~/.vimrc && \ 
+    cp -v ~/.config/omzsh/.zshrc ~/ && \
+    cp -v ~/.config/omzsh/custom_themes/refined.zsh-theme /root/.oh-my-zsh/custom/themes && \
+    cp -vr ~/.config/tmux/. ~/ && \ 
+    echo "export DOCKER_INFO='⎈ '" >> ~/.zshrc
 
-# setup a few helpful directories
-RUN mkdir ~/.config
-RUN mkdir ~/repos
-
-# copy over dotfiles (yes, this is inefficient) 
-RUN git clone https://github.com/delfanbaum/dotfiles.git ~/repos/dotfiles
-RUN echo "Copying dotfiles..."
-RUN cp -vr ~/repos/dotfiles/nvim ~/.config
-RUN cp -v ~/repos/dotfiles/vim/.vimrc ~/.vimrc
-RUN cp -v ~/repos/dotfiles/omzsh/.zshrc ~/
-RUN cp -v ~/repos/dotfiles/omzsh/custom_themes/refined.zsh-theme /root/.oh-my-zsh/custom/themes
-RUN cp -vr ~/repos/dotfiles/tmux/. ~/
-RUN cp -vr ~/repos/dotfiles/alacritty ~/.config  
-
-# install packer
+# install packer and nvim plugins
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim \
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# install neovim plugins
-RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
-# add custom theme and releavnt env variable so we know we're inside the container
-RUN echo "export DOCKER_INFO='⎈ '" >> ~/.zshrc
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim && \
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # start the prompt when running the container
 CMD ["zsh"]
