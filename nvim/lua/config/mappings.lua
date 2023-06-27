@@ -27,6 +27,9 @@ local maps = {
     {'','<C-k>', '<C-w>k', noremap_silent},
     {'','<C-l>', '<C-w>l', noremap_silent},
 
+    -- Spelling
+    {'n', '<leader>z', '1z=<CR>', noremap_silent},
+
     -- Nerdtree
     {'','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>', noremap_silent},
 
