@@ -23,45 +23,6 @@ font:
     style: "Italic"
   size: 13
 
-# Colors (One Dark)
-colors:
-  # Default colors
-  primary:
-    foreground: '0xabb2bf'
-    background: '0x282c34'
-
-  # Cursor colors
-  cursor:
-    text: '0x2c323c'
-    cursor: '0x5c6370'
-
-  # Selection colors
-  selection:
-    text: CellForeground
-    background: '0x3e4452'
-
-  # Normal colors
-  normal:
-    black:   '0x2c323c'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xe5c07b'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0x5c6370'
-
-  # Bright colors
-  bright:
-    black:   '0x3e4452'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xe5c07b'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xabb2bf'
-
 key_bindings:
   - { key: Left,     mods: Alt,     chars: "\x1bb"                       } # Skip word left
   - { key: Right,    mods: Alt,     chars: "\x1bf"                       } # Skip word right
@@ -69,3 +30,7 @@ key_bindings:
   - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
   - { key: Back,     mods: Command, chars: "\x15"                        } # Delete line
   - { key: Back,     mods: Alt,     chars: "\x1b\x7f"                    } # Delete word
+
+# colors
+import:
+  - ~/.config/alacritty/themes/onedark.yml
