@@ -40,8 +40,10 @@ vim.opt.mouse = "nv"
 
 -- colors
 vim.o.termguicolors = 1
-vim.o.background = 'dark'
-vim.cmd.colorscheme 'onedark'
+-- vim.o.background = 'dark'
+-- vim.cmd.colorscheme 'onedark'
+vim.o.background = 'light'
+vim.cmd.colorscheme 'everforest'
 
 -- vim stuff
 vim.cmd [[:command W w]]
