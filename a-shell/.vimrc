@@ -1,5 +1,7 @@
 " vimrc for a-shell (and mini)
 
+let mapleader=' '
+
 " environment defaults
 syntax on
 set nocompatible

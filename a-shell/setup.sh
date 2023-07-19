@@ -13,7 +13,7 @@ mkdir -p ~/Documents/.vim/pack/vendor/start
 for p in ${vim_packages}; do
     path=${p##*/}
     destination=~/Documents/.vim/pack/vendor/start/$path
-    if [ ! -d $destination]
+    if [ ! -d $destination ]; then
         echo "Installing $p..."
         lg2 clone https://github.com/$p $destination
     else
