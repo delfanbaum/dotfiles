@@ -31,11 +31,14 @@ noremap <CR> :noh<CR><CR>
 :command W w
 
 " prose
+set wrap
+set linebreak
+
+" spelling
 set spell
 set spelllang=en
 set spellsuggest=best,5
-set wrap
-set linebreak
+nnoremap <silent> <leader>z 1z=
 
 " color things
 set termguicolors
