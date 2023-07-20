@@ -80,6 +80,10 @@ set laststatus=2
 set noshowmode
 let g:lightline = {
       \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \     'left': [ [ 'mode' ], [ 'filename' ] ],
+      \     'right': [ [ 'lineinfo' ], [ 'percent' ] ]
+      \   },
       \ 'mode_map': {
         \ 'n' : 'N',
         \ 'i' : 'I',
