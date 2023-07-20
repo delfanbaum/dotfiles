@@ -1,3 +1,9 @@
+if [ $1 ]; then
+    args=$1
+else
+    args="NONE"
+fi
+
 echo "Configuring a-shell..."
 config -b "#282c34" -p  # background color
 config -f "#abb2bf" -p  # foreground color
@@ -17,7 +23,7 @@ for p in ${vim_packages}; do
         echo "Installing $p..."
         lg2 clone https://github.com/$p $destination
     else
-        if [ $1 == "update" ]; then
+        if [ $args = "update" ]; then
             echo "$p is already installed. Checking for updates..."
             cd $destination
             lg2 pull
