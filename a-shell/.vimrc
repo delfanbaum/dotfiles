@@ -57,6 +57,10 @@ let &t_EI = "\e[2 q"
 " backspace because... 
 set backspace=indent,eol,start
 
+" commands for characters the folding keyboard is missing
+command Tilde :normal i ~<ESC>
+command Backtic :normal i `<ESC>
+
 " key mappings for movement
 noremap <silent> 0 g0
 noremap <silent> $ g$
