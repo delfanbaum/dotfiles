@@ -17,7 +17,9 @@ for p in ${vim_packages}; do
         echo "Installing $p..."
         lg2 clone https://github.com/$p $destination
     else
-        echo "$p is already installed."
+        echo "$p is already installed. Checking for updates..."
+        cd $destination
+        lg2 pull
     fi
 done
 
