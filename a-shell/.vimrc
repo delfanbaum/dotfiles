@@ -81,7 +81,7 @@ set noshowmode
 let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ 'active': {
-      \     'left': [ [ 'mode' ], [ 'filename' ] ],
+      \     'left': [ [ 'mode' ], [ 'filename' ], [ 'modified' ] ],
       \     'right': [ [ 'lineinfo' ], [ 'percent' ] ]
       \   },
       \ 'mode_map': {
