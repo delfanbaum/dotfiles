@@ -1,3 +1,5 @@
+local format = require 'config.formatters'
+
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
 	return
@@ -5,12 +7,14 @@ end
 
 -- add word count
 local function word_count()
-    local fts = {asciidoctor = true,
-                 text = true,
-                 markdown = true,
-                 asciiboc = true}
+    local fts = {
+        asciidoctor = true,
+        text = true,
+        markdown = true,
+        asciiboc = true
+    }
     if fts[vim.bo.filetype] then
-        return tostring(vim.fn.wordcount().words) .. " w"
+        return format.comma_value(vim.fn.wordcount().words) .. " words"
     else
         return ''
     end
@@ -31,7 +35,7 @@ lualine.setup {
       lualine_b = {'branch', 'diff', 'diagnostics'},
       lualine_c = {'filename'},
       lualine_x = { word_count,
-                    'encoding',
+                    -- 'encoding',
                     {
                         'filetype',
                         icon_only = false,
