@@ -42,6 +42,7 @@ vim.opt.mouse = "nv"
 vim.o.termguicolors = 1
 vim.o.background = 'light'
 vim.cmd.colorscheme 'everforest'
+vim.g.everforest_enable_italic = "1"
 
 -- vim stuff
 vim.cmd [[:command W w]]
