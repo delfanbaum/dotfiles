@@ -44,6 +44,7 @@ vim.o.termguicolors = 1
 -- vim.cmd.colorscheme 'onedark'
 vim.o.background = 'light'
 vim.cmd.colorscheme 'everforest'
+vim.g.everforest_enable_italic = "1"
 
 -- vim stuff
 vim.cmd [[:command W w]]
