@@ -10,3 +10,6 @@ nvim/plugin
 
 # Ignore Apple nonsenese
 **/*.DS_Store
+
+# Ignore GIMP settings (at least for now)
+gtk-2.0
