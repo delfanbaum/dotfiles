@@ -12,7 +12,7 @@ config -k beam -p  # cursor as beam
 echo "Setting up vim..."
 cp .vimrc ~/Documents/.vimrc
 
-vim_packages="joshdick/onedark.vim tpope/vim-surround junegunn/goyo.vim habamax/vim-asciidoctor sainnhe/everforest itchyny/lightline.vim"
+vim_packages="joshdick/onedark.vim tpope/vim-surround junegunn/goyo.vim habamax/vim-asciidoctor sainnhe/everforest"
 
 mkdir -p ~/Documents/.vim/pack/vendor/start
 
