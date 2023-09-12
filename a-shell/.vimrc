@@ -5,7 +5,7 @@ let mapleader=' '
 " environment defaults
 syntax on
 set nocompatible
-set number
+"set number
 set encoding=utf-8
 set splitright
 set splitbelow
