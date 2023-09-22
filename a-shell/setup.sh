@@ -35,4 +35,7 @@ done
 
 cp ~/Documents/.vim/pack/vendor/start/onedark.vim/autoload/lightline/colorscheme/onedark.vim ~/Documents/.vim/pack/vendor/start/lightline.vim/autoload/lightline/colorscheme/
 
+echo "Installing some useful packages"
+pip install beautifulsoup4 asciidoc
+
 echo "All set!"
