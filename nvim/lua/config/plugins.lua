@@ -56,7 +56,10 @@ return require('packer').startup(function()
 
 
     -- Treesitter
-    use { 'nvim-treesitter/nvim-treesitter' }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
     use 'Glench/Vim-Jinja2-Syntax' -- at least until I can find a better treesitter one
 
     -- Search things
