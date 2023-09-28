@@ -1,6 +1,9 @@
 # Ignore the compiled plugin directory
 nvim/plugin
 
+# Ignore vale plugins
+vale/proselint
+
 # Ignore any secrets
 .env
 .secrets
