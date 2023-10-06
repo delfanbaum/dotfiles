@@ -15,8 +15,8 @@ if [ -f ~/.zsh_aliases ]; then
 source ~/.zsh_aliases
 fi
 
-# container things
-export DOCKER_INFO='⎈ '
+# container thing
+export DOCKER_INFO='[DEV] '
 
 # a fancy to get nvim in there
 export PATH="/workspaces/digital-distribution/.devcontainer/bin/nvim-linux64/bin:$PATH"

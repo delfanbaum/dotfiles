@@ -1,21 +1,34 @@
-# Some global things we'll want to do everywhere
-# We assume that nvim and tmux are provided as "features"
-# We also assume that the following two lines are being run as our "postCreateCommand"
+# Setup script assumes dev container is run as root
+# Script also assumes that this script is being run as our "postCreateCommand"
 
-# git clone https://github.com/delfanbaum/dotfiles.git ~/.usrconfig
-# export XDG_CONFIG_HOME=~/.usrconfig
+# install nvim
+if [ ! -d .devcontainer/bin ]; then
+    curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+    mkdir -p .devcontainer/bin && tar xzvf nvim-linux64.tar.gz -C .devcontainer/bin
+    rm nvim-linux64.tar.gz
+fi
 
-# setup tmux
-cat <<EOF >>~/.tmux.conf
-if-shell "who | grep -q vscode" "source-file ~/.usrconfig/tmux/tmux.devcontainer.conf"
-EOF
+# install python things we want
+pip install pynvim pyright
 
-# install packer (for now; should probably replace with lazy at some point)
+# install zsh
+wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -
+
+# install some other nice things
+apt-get update && apt-get install tmux bat fzf ripgrep tar curl -y
+
+# install dotfiles
+git clone https://github.com/delfanbaum/dotfiles.git ~/.config
+
+# copy over zsh env
+cp ~/.config/devcontainer/.zshrc ~/.zshrc
+cp ~/.config/omzsh/.zsh_aliases ~/.zsh_aliases
+cp -v ~/.config/omzsh/custom_themes/refined.zsh-theme /root/.oh-my-zsh/custom/themes
+
+
+# install packer and packages
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-# copy over our .zshrc file(s) (note: no custom theme for now)
-cp ~/.usrconfig/omzsh/.zshrc ~/.zshrc
-cp ~/.usrconfig/omzsh/.zsh_aliases ~/.zsh_aliases
-
-
+# install the project
+poetry install
