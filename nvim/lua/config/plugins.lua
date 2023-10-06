@@ -58,7 +58,10 @@ return require('packer').startup(function()
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end
     }
     use 'Glench/Vim-Jinja2-Syntax' -- at least until I can find a better treesitter one
 
@@ -98,12 +101,12 @@ return require('packer').startup(function()
         "mfussenegger/nvim-dap-python",
         "nvim-telescope/telescope-dap.nvim",
         { "jbyuki/one-small-step-for-vimkind", module = "osv" },
-        { "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
+        --[[ { "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
         {
           "microsoft/vscode-js-debug",
           opt = true,
           run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-        },
+        }, ]]
       },
       config = function()
         require("config.dap").setup()

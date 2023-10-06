@@ -91,6 +91,7 @@ Ech
 Elfanbaum
 Elfanbaum's
 Elia
+Enviornment
 Epoque
 Ernaux
 FPID
@@ -352,9 +353,11 @@ damnit
 deadringer
 deprecations
 devcontainers
+devcontainer
 distractors
 dockerfile
 donut
+dotfile
 dotfiles
 downtube
 drainy
@@ -391,6 +394,7 @@ hardcode
 headachey
 headspace
 htmlbook
+id
 img
 improvers
 initializer
@@ -437,10 +441,12 @@ nvim
 ohmyzsh
 ol
 onboarding
+oreilly
 orgs
 overshirt
 oy
 parentheticals
+per se
 pissy
 playspace
 png
