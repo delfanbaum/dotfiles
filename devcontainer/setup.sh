@@ -1,7 +1,7 @@
 # Setup script assumes dev container is run as root
 # Script also assumes that this script is being run as our "postCreateCommand"
 
-# install nvim
+# install nvim (if not already available in project)
 if [ ! -d .devcontainer/bin ]; then
     curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
     mkdir -p .devcontainer/bin && tar xzvf nvim-linux64.tar.gz -C .devcontainer/bin
@@ -15,7 +15,7 @@ pip install pynvim pyright
 wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -
 
 # install some other nice things
-apt-get update && apt-get install tmux bat fzf ripgrep tar curl -y
+apt-get update && apt-get install tmux bat fzf ripgrep tar curl nodejs npm -y
 
 # install dotfiles
 git clone https://github.com/delfanbaum/dotfiles.git ~/.config
