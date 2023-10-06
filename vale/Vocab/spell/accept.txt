@@ -12,6 +12,7 @@ ATL
 AWP
 Abbie
 Ach
+Affordances
 AirBnB
 Alacritty
 Alaphilippe
@@ -90,6 +91,7 @@ Ech
 Elfanbaum
 Elfanbaum's
 Elia
+Enviornment
 Epoque
 Ernaux
 FPID
@@ -323,6 +325,7 @@ asciidoc
 asciidoctor
 async
 audiobook
+auth
 bachelorette
 backend
 barcharts
