@@ -43,4 +43,4 @@ key_bindings:
 
 # colors
 import:
-  - ~/.config/alacritty/themes/onedark.yml
+  - ~/.config/alacritty/themes/manual.yml

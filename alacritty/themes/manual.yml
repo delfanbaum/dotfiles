@@ -1,0 +1,39 @@
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    foreground: '0x424242'
+    background: '0xeeeeee'
+
+  # Cursor colors
+  cursor:
+    text: '0x424242'
+    cursor: '0x00c6ff'
+
+  # Selection colors
+  selection:
+    text: CellForeground
+    background: '0x3e4452'
+
+  # Normal colors
+  normal:
+    black:   '0x424242'
+    red:     '0xd25104'  # done
+    green:   '0x40831f'  # done
+    yellow:  '0xb47900'  # done
+    blue:    '0x3376c0'  # done
+    magenta: '0xb162c6'  # done
+    cyan:    '0x00c6ff'  # done
+    white:   '0xeeeeee'  # done
+
+  # # Bright colors
+  # bright:
+  #   black:   '0x3e4452'
+  #   red:     '0xe06c75'
+  #   green:   '0x98c379'
+  #   yellow:  '0xe5c07b'
+  #   blue:    '0x00c6ff'
+  #   magenta: '0xd06ba2' #done
+  #   cyan:    '0x56b6c2'
+  #   white:   '0xabb2bf'
+
