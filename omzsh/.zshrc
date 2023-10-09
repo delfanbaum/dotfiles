@@ -14,3 +14,6 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zsh_aliases ]; then
 source ~/.zsh_aliases
 fi
+
+# FZF command include hidden files and folders
+export FZF_DEFAULT_COMMAND='find .'
