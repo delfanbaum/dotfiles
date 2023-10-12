@@ -1,3 +1,7 @@
+# git
+alias gp="git push"
+alias gs="git status"
+
 # tmux (because who needs an extra plugin if all you use is this?) 
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
@@ -8,3 +12,14 @@ alias be="bundle exec"
 alias py="python"
 alias pr="poetry run"
 alias nv='nvim'
+
+# python
+alias py="python"
+alias pr="poetry run"
+alias prpy="poetry run python"
+alias dm="poetry run python manage.py"
+alias devc_up="devcontainer up --workspace-folder ."
+alias devc_exec="devcontainer exec --workspace-folder ."
+
+# ruby
+alias be='bundle exec'
