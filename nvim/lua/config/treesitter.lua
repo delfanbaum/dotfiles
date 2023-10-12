@@ -8,6 +8,7 @@ local ensure_install = {
     "c",
     "javascript",
     "json",
+    "jsonc",
     "lua",
     "python",
     "typescript",
