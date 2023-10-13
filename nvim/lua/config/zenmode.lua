@@ -6,7 +6,7 @@ end
 zenmode.setup {
     window = {
         backdrop = 1,
-        width = 100,
+        width = 66,
         options = {
             number = false,
             relativenumber = false
@@ -15,7 +15,11 @@ zenmode.setup {
     plugins = {
         gitsigns = { enabled = true },
         tmux = { enabled = true },
-        twilight = { enabled = false }
+        twilight = { enabled = false },
+        alacritty = {
+          enabled = true,
+          font = 15
+    }
     },
     on_open = function()
         vim.o.scrolloff = 999
