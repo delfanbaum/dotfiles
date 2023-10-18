@@ -23,8 +23,10 @@ zenmode.setup {
     },
     on_open = function()
         vim.o.scrolloff = 999
+        vim.opt.mouse = ""
     end,
     on_close = function()
         vim.o.scrolloff = 5
+        vim.opt.mouse = "nv"
     end
 }
