@@ -75,6 +75,7 @@ return require('packer').startup(function()
       requires = {
         "nvim-lua/plenary.nvim",
         "nvim-neotest/neotest-python",
+        -- "delfanbaum/neotest-python",
         "nvim-treesitter/nvim-treesitter",
         "antoinemadec/FixCursorHold.nvim"
       }

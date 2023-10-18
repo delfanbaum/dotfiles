@@ -17,7 +17,7 @@ neotest.setup({
     },
     output = {
       enabled = true,
-      open_on_run = false, -- until the quickfix issue is sovled
+      open_on_run = false, -- until the quickfix issue is solved
       short = false,
       last_run = true,
       auto_close = true
