@@ -12,7 +12,7 @@ then
 fi
 
 echo "Installing all the things..."
-brew install neovim tmux bat pyvenv node
+brew install neovim tmux bat pyvenv node fzf ripgrep
 
 # install packer if it's not there already
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
