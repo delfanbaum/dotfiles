@@ -13,22 +13,12 @@ scrolling:
   history: 1000
   multiplier: 3
 
-# font:
-#   normal:
-#     family: "SauceCodePro Nerd Font Propo"
-#     style: "Regular"
-#   bold:
-#     style: "Medium"
-#   italic:
-#     style: "Italic"
-#   size: 13
-
 font:
   normal:
-    family: "iMWritingMono Nerd Font"
+    family: "BlexMono Nerd Font Mono"
     style: "Regular"
   bold:
-    style: "Regular"
+    style: "Medium"
   italic:
     style: "Italic"
   size: 13
