@@ -15,7 +15,7 @@ scrolling:
 
 font:
   normal:
-    family: "BlexMono Nerd Font Mono"
+    family: "BlexMono Nerd Font"
     style: "Regular"
   bold:
     style: "Medium"
