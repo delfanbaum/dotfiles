@@ -29,6 +29,7 @@ return require('packer').startup(function()
 
     -- "Focus mode" things
     use "folke/zen-mode.nvim"
+    use "folke/twilight.nvim"
 
     -- Language Servers
     use { 'hrsh7th/cmp-nvim-lsp' } -- LSP source for nvim-cmp
