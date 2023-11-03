@@ -12,7 +12,7 @@ return require('packer').startup(function()
 
     -- Color things
     use 'joshdick/onedark.vim'
-    use 'neanias/everforest-nvim' -- for "light mode"
+    use 'ishan9299/nvim-solarized-lua'
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons' }
