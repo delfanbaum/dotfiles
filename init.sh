@@ -34,6 +34,8 @@ brew install \
     rbenv \
     ruby-build \
     node \
+    wget \
+    curl \
     sass/sass/sass \
 
 # install packer if it's not there already
@@ -46,6 +48,10 @@ fi
 # install omzsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Grab some fonts
+echo "Pulling down our temrinal font..."
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/IBMPlexMono.zip
 
 echo "Moving config files..."
 case $($0) in
