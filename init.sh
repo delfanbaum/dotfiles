@@ -1,7 +1,15 @@
 # Ensure home is where the heart is
 echo "XDG_CONFIG_HOME=$HOME" >> ~/.profile
 
-# Install Homebrew (slow, but keeps everything else simpler)
+if [ $(uname) == "Darwin"]; then
+  xcode-select --install
+fi
+
+if [ $(uname) == "Linux"]; then
+  apt-get update && apt-get install git gcc clang -y
+fi
+
+# Install Homebrew (slow, but maybe keeps everything else simpler)
 if ! command brew -v &> /dev/null 
 then
   if [ $(uname -m) == "arm64" ] && [ $(uname) == "Linux"]; then
@@ -12,14 +20,40 @@ then
 fi
 
 echo "Installing all the things..."
-brew install neovim tmux bat pyvenv node fzf ripgrep
+brew install \
+    alacritty \
+    neovim \
+    tmux \
+    asciidoctor \
+    bat \
+    pyvenv \
+    node \
+    fzf \
+    ripgrep \
+    pyenv \
+    rbenv \
+    ruby-build \
+    node \
+    wget \
+    curl \
+    sass/sass/sass \
 
 # install packer if it's not there already
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+  echo "Installing packer..."
   git clone --depth 1 https://github.com/wbthomason/packer.nvim \
   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
+# install omzsh
+echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Grab some fonts
+echo "Pulling down our temrinal font..."
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/IBMPlexMono.zip
+
+echo "Moving config files..."
 case $($0) in
   "/bin/zsh")
     cp ~/.config/omzsh/.zshrc ~

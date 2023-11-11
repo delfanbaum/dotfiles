@@ -7,7 +7,18 @@ ZSH_THEME="refined"
 # Plugins
 plugins=(git)
 
+# Python
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+export VIRTUALENVWRAPPER_PYTHON="$HOME/.pyenv/shims/python"
+
+# Ruby
+export BUNDLE_PATH=~/.gems
+
 # Startup
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Use separate aliases file
@@ -17,3 +28,6 @@ fi
 
 # FZF command include hidden files and folders
 export FZF_DEFAULT_COMMAND='find .'
+
+# Update preferences
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
