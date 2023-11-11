@@ -16,4 +16,4 @@ jobs:
           from_branch: main
           target_branch: light
           message: Merge  back into light mode
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
