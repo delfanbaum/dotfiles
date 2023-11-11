@@ -41,7 +41,7 @@ vim.opt.mouse = "nv"
 -- colors
 vim.o.termguicolors = 1
 vim.o.background = 'light'
-vim.cmd.colorscheme 'solarized-flat'
+vim.cmd.colorscheme 'solarized'
 vim.o.solarized_italics = 1
 
 -- vim stuff

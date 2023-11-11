@@ -2,7 +2,8 @@
 colors:
   # Default colors
   primary:
-    foreground: '0x93a1a1'
+    # foreground: '0x93a1a1'
+    foreground: '0x586e75' # use the regular foreground color
     background: '0xfdf6e3'
 
   # Cursor colors
