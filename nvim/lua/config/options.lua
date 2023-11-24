@@ -29,6 +29,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
+vim.opt.textwidth = 80  -- try for now
 vim.opt.wrap = true -- add soft wraps
 vim.opt.linebreak = true
 

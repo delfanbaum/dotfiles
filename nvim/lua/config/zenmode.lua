@@ -6,7 +6,7 @@ end
 zenmode.setup {
     window = {
         backdrop = 1,
-        width = 66,
+        width = 80,
         options = {
             number = false,
             relativenumber = false
@@ -18,15 +18,15 @@ zenmode.setup {
         twilight = { enabled = false },
         alacritty = {
           enabled = true,
-          font = 15
+          -- font = 15
     }
     },
     on_open = function()
-        vim.o.scrolloff = 999
+        -- vim.o.scrolloff = 999
         vim.opt.mouse = ""
     end,
     on_close = function()
-        vim.o.scrolloff = 5
+        -- vim.o.scrolloff = 5
         vim.opt.mouse = "nv"
     end
 }

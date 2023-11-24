@@ -3,7 +3,7 @@ window:
   decorations: buttonless
   dynamic_title: false
   dimensions:
-    columns: 120
+    columns: 100
     lines: 45
   padding:
     x: 15
@@ -21,7 +21,7 @@ font:
     style: "Medium"
   italic:
     style: "Italic"
-  size: 13
+  size: 14
 
 key_bindings:
   - { key: Left,     mods: Alt,     chars: "\x1bb"                       } # Skip word left
