@@ -31,6 +31,9 @@ return require('packer').startup(function()
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
 
+    -- silly things
+    use 'seandewar/killersheep.nvim'
+
     -- Language Servers
     use { 'hrsh7th/cmp-nvim-lsp' } -- LSP source for nvim-cmp
     use { "williamboman/mason.nvim" }
@@ -115,5 +118,6 @@ return require('packer').startup(function()
       end,
       disable = false,
     }
+
 
 end)
