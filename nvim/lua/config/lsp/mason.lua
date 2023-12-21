@@ -1,11 +1,12 @@
 local servers = { -- "ensure installed" list
-	"pyright",
+	"ruff_lsp",
+  "pyright",
 	"tsserver",
 	"bashls",
 	"jsonls",
 	"yamlls",
-    "glint",
-    "tailwindcss",
+  "glint",
+  "tailwindcss",
 }
 
 local settings = {
