@@ -7,10 +7,7 @@ alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
 
-# convenience aliases
-alias be="bundle exec"
-alias py="python"
-alias pr="poetry run"
+# neovim
 alias nv='nvim'
 
 # python
