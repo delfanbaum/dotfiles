@@ -1,5 +1,0 @@
-python-lsp-server
-flake8
-mypy
-pylsp-mypy
-poetry
