@@ -12,6 +12,11 @@ return {
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
 
+    -- Extra formatting (null-ls)
+    {'nvimtools/none-ls.nvim',
+     dependences = {"nvim-lua/plenary.nvim"}
+    },
+
     -- Snippets
     'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
