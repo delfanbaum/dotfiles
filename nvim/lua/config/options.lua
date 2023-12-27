@@ -23,9 +23,6 @@ vim.opt.ignorecase = true
 vim.opt.hlsearch = true -- highlights while typing
 
 -- Tab things and language things
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
