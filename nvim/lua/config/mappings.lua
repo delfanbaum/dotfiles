@@ -1,6 +1,3 @@
--- set leader to space
-vim.g.mapleader = ' '
-
 -- option defaults
 local empty = {}
 local noremap = { noremap = true}

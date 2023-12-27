@@ -10,42 +10,15 @@ return require('packer').startup(function()
     use {'Xuyuanp/nerdtree-git-plugin', opt = true, cmd = {'Nerdtree', 'NERDTreeToggle'}}
     use {'ryanoasis/vim-devicons', opt = true, cmd = {'Nerdtree', 'NERDTreeToggle'}}
 
-    -- Color things
-    use 'joshdick/onedark.vim'
-    use 'ishan9299/nvim-solarized-lua'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' }
-    }
 
-    -- Git things
-    use 'lewis6991/gitsigns.nvim'
 
     -- Writing things
-    use 'tpope/vim-surround'
     use {'habamax/vim-asciidoctor', ft = {'asciidoc'} }
-    use 'windwp/nvim-autopairs'
-    use 'numToStr/Comment.nvim'
 
     -- "Focus mode" things
-    use "folke/zen-mode.nvim"
-    use "folke/twilight.nvim"
-
     -- silly things
     use 'seandewar/killersheep.nvim'
 
-    -- Language Servers
-    use { 'hrsh7th/cmp-nvim-lsp' } -- LSP source for nvim-cmp
-    use { "williamboman/mason.nvim" }
-    use { "williamboman/mason-lspconfig.nvim" }
-    use { 'neovim/nvim-lspconfig' }
-
-    -- Completion 
-    use { 'hrsh7th/nvim-cmp' }
-    use { 'hrsh7th/cmp-buffer' }
-    use { 'hrsh7th/cmp-path' }
-    use { 'hrsh7th/cmp-cmdline' }
-    use { 'saadparwaiz1/cmp_luasnip' }
 
     -- Linting, formatting
     use {'jose-elias-alvarez/null-ls.nvim',
@@ -53,37 +26,6 @@ return require('packer').startup(function()
                 "nvim-lua/plenary.nvim"
             }
         }
-
-    -- Snippets
-    use { 'L3MON4D3/LuaSnip' }
-    use { 'rafamadriz/friendly-snippets' }
-
-
-    -- Treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end
-    }
-    use 'Glench/Vim-Jinja2-Syntax' -- at least until I can find a better treesitter one
-
-    -- Search things
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
-
-    -- Test runner
-    use {
-      "nvim-neotest/neotest",
-      requires = {
-        "nvim-lua/plenary.nvim",
-        "nvim-neotest/neotest-python",
-        -- "delfanbaum/neotest-python",
-        "nvim-treesitter/nvim-treesitter",
-        "antoinemadec/FixCursorHold.nvim"
-      }
-    }
 
     -- Debugger
     use {

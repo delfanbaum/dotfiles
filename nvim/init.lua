@@ -1,15 +1,22 @@
-require('config.plugins')
+-- set leader to space before lazy (because it said so)
+vim.g.mapleader = ' '
+
+-- plugins
+require('config.lazy')
+require('lazy').setup("plugins")
+
+-- basic configuration
 require('config.options')
-require('config.lualine')
-require('config.nerdtree')
-require('config.asciidoctor')
-require('config.autopairs')
-require('config.comment')
-require('config.treesitter')
-require('config.gitsigns')
-require('config.zenmode')
-require('config.twilight')
-require('config.cmp')
-require('config.lsp')
-require('config.neotest')
 require('config.mappings')
+
+-- plugin configs
+require('config.autopairs')
+require('config.cmp')
+require('config.comment')
+require('config.gitsigns')
+require('config.lsp')
+require('config.lualine')
+require('config.neotest')
+require('config.treesitter')
+require('config.twilight')
+require('config.zenmode')
