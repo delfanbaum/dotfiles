@@ -8,10 +8,9 @@ end
 -- add word count
 local function word_count()
     local fts = {
-        asciidoctor = true,
         text = true,
         markdown = true,
-        asciiboc = true
+        asciidoc = true
     }
     if fts[vim.bo.filetype] then
         return format.comma_value(vim.fn.wordcount().words) .. " words"
