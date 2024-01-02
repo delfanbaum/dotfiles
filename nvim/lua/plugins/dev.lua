@@ -12,6 +12,14 @@ return {
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
 
+    -- linting 
+    {'mfussenegger/nvim-lint',
+        event = {
+            "BufReadPre",
+            "BufNewFile"
+        }
+    },
+
     -- Extra formatting (null-ls)
     {'nvimtools/none-ls.nvim',
      dependences = {"nvim-lua/plenary.nvim"}

@@ -1,12 +1,13 @@
-local servers = { -- "ensure installed" list
+local default_install = { -- "ensure installed" list
 	"ruff_lsp",
-  "pyright",
+    "eslint",
+    "pyright",
 	"tsserver",
 	"bashls",
 	"jsonls",
 	"yamlls",
-  "glint",
-  "tailwindcss",
+    "glint",
+    "tailwindcss",
 }
 
 local settings = {
@@ -31,7 +32,7 @@ mason.setup(settings)
 
 local mason_lspconfig = require("mason-lspconfig")
 mason_lspconfig.setup({
-	ensure_installed = servers,
+	ensure_installed = default_install,
 	automatic_installation = true,
     registries = {
         "github:mason-org/mason-registry",
