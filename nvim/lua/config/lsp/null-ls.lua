@@ -14,6 +14,6 @@ null_ls.setup({
 		formatting.stylua,
         diagnostics.flake8,
         -- diagnostics.vale,
-        diagnostics.jsonlint,
+        -- diagnostics.jsonlint,
 	},
 })
