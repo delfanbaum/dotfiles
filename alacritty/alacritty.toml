@@ -1,4 +1,4 @@
-import = ["/Users/delfanbaum/.config/alacritty/themes/onedark.toml"]
+import = ["/Users/delfanbaum/.config/alacritty/themes/solarized-flat.toml"]
 
 [font]
 size = 14
