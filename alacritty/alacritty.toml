@@ -1,0 +1,63 @@
+import = ["/Users/delfanbaum/.config/alacritty/themes/onedark.toml"]
+
+[font]
+size = 14
+
+[font.bold]
+style = "Medium"
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "BlexMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Left"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Right"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B\u007F"
+key = "Back"
+mods = "Alt"
+
+[scrolling]
+history = 1000
+multiplier = 3
+
+[window]
+decorations = "buttonless"
+dynamic_title = false
+title = "Alacritty"
+
+[window.dimensions]
+columns = 100
+lines = 45
+
+[window.padding]
+x = 15
+y = 15
