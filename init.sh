@@ -38,13 +38,6 @@ brew install \
     curl \
     sass/sass/sass \
 
-# install packer if it's not there already
-if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
-  echo "Installing packer..."
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-fi
-
 # install omzsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -56,6 +49,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/IBMPlexMon
 echo "Moving config files..."
 case $($0) in
   "/bin/zsh")
+    cp ~/.config/vim/.vimrc ~
     cp ~/.config/omzsh/.zshrc ~
     cp ~/.config/omzsh/.zsh_aliases ~
     cp ~/.config/omzsh/.bash_aliases ~  # just in case

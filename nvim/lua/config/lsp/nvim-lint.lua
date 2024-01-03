@@ -4,9 +4,14 @@ if not nvim_lint_status_ok then
 end
 
 nvim_lint.linters_by_ft = {
+    bash = {"shellcheck"},
+    css = {"stylelint"},
     javascript = { "eslint_d" },
+    json = {"jsonlint"},
     lua = { "luacheck" },
     python = { "ruff" },
+    scss = {"stylelint"},
+    yaml = {"yamllint"},
 }
 
 vim.api.nvim_create_autocmd(
