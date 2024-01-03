@@ -4,7 +4,7 @@ return {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     'neovim/nvim-lspconfig',
-    
+
     -- completion
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-buffer',
@@ -12,17 +12,12 @@ return {
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
 
-    -- linting 
+    -- linting
     {'mfussenegger/nvim-lint',
         event = {
             "BufReadPre",
             "BufNewFile"
         }
-    },
-
-    -- Extra formatting (null-ls)
-    {'nvimtools/none-ls.nvim',
-     dependences = {"nvim-lua/plenary.nvim"}
     },
 
     -- Snippets

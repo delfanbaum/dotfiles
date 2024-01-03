@@ -5,15 +5,13 @@ end
 
 nvim_lint.linters_by_ft = {
     javascript = { "eslint_d" },
-    python = { "ruff" }
+    lua = { "luacheck" },
+    python = { "ruff" },
 }
 
-local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-
 vim.api.nvim_create_autocmd(
-    { "BufEnter", "BufWritePost", "InsertLeave" },
-    { group = lint_augroup,
-      callback = function()
+    { "BufWinEnter", "BufWritePost", "InsertLeave", "TextChanged" },
+    { callback = function()
         nvim_lint.try_lint()
-      end,}
+      end, }
 )
