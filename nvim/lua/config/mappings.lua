@@ -55,6 +55,10 @@ local maps = {
     {'n', '<leader>td', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", empty},
     {'n', '<leader>ti', "<cmd>lua require('neotest').output.open({enter = true})<cr>", empty},
     {'n', '<leader>ta', "<cmd>lua require('neotest').run.attach()<cr>", empty},
+
+    -- nvim-lint
+    {'n', '<leader>l', "<cmd>lua require('lint').try_lint()<cr>", empty},
+
 }
 
 -- workaround for Lua versions, just ignore the warning
