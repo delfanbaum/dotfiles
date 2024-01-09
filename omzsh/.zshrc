@@ -15,6 +15,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export VIRTUALENVWRAPPER_PYTHON="$HOME/.pyenv/shims/python"
 
 # Ruby
+if command -v rbenv 1>/dev/null 2>&1; then
+    eval "$(rbenv init - zsh)"
+fi
 export BUNDLE_PATH=~/.gems
 
 # Startup
