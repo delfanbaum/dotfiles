@@ -9,6 +9,13 @@ comment.setup({
         ---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
         basic = true,
         ---Extra mapping; `gco`, `gcO`, `gcA`
-        extra = true,
+        extra = false,
     }
 })
+
+local status_ok_ft, comment_ft = pcall(require, "Comment.ft")
+if not status_ok_ft then
+	return
+end
+
+comment_ft.set('asciidoc', '// %s')
