@@ -9,14 +9,15 @@ local maps = {
     {'','<Esc>', ':noh<CR>', noremap},
 
     -- Text movement
-    {'','k', 'gk', noremap_silent},
-    {'','<Up>', 'gk', noremap_silent},
-    {'i','<Up>', '<C-o>gk', noremap_silent},
-    {'','j', 'gj', noremap_silent},
-    {'','<Down>', 'gj', noremap_silent},
-    {'i','<Down>', '<C-o>gj', noremap_silent},
-    {'','0', 'g0', noremap_silent},
-    {'','$', 'g$', noremap_silent},
+    -- (Removing for now now that I'm not wrapping lines by default)
+    -- {'','k', 'gk', noremap_silent},
+    -- {'','<Up>', 'gk', noremap_silent},
+    -- {'i','<Up>', '<C-o>gk', noremap_silent},
+    -- {'','j', 'gj', noremap_silent},
+    -- {'','<Down>', 'gj', noremap_silent},
+    -- {'i','<Down>', '<C-o>gj', noremap_silent},
+    -- {'','0', 'g0', noremap_silent},
+    -- {'','$', 'g$', noremap_silent},
 
     -- Window movement
     {'','<C-h>', '<C-w>h', noremap_silent},
