@@ -8,6 +8,7 @@ local default_install = { -- "ensure installed" list
 	"yamlls",
     "glint",
     "tailwindcss",
+    "gopls",
 }
 
 local settings = {

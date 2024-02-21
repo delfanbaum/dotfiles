@@ -56,3 +56,6 @@ case $($0) in
     cp -v ~/.config/omzsh/custom_themes/refined.zsh-theme ~/.oh-my-zsh/custom/themes
   ;;
 esac
+
+# global gitignore
+git config --global core.excludesFile '~/.gitignore'

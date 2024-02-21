@@ -1,5 +1,6 @@
 # Ignore the compiled plugin directory
 nvim/plugin
+nvim/lazy-lock.json
 
 # Ignore vale plugins
 vale/proselint
