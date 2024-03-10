@@ -37,6 +37,8 @@ brew install \
     wget \
     curl \
     sass/sass/sass \
+    luarocks \
+    go
 
 # install omzsh
 echo "Installing oh-my-zsh"
@@ -56,6 +58,9 @@ case $($0) in
     cp -v ~/.config/omzsh/custom_themes/refined.zsh-theme ~/.oh-my-zsh/custom/themes
   ;;
 esac
+
+# install luacheck so we can work on files
+luarocks install luacheck
 
 # global gitignore
 git config --global core.excludesFile '~/.gitignore'

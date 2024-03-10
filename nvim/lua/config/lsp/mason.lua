@@ -2,13 +2,13 @@ local default_install = { -- "ensure installed" list
 	"ruff_lsp",
     "eslint",
     "pyright",
-	"tsserver",
 	"bashls",
 	"jsonls",
 	"yamlls",
     "glint",
     "tailwindcss",
     "gopls",
+    "lua_ls",
 }
 
 local settings = {
@@ -53,11 +53,6 @@ for _, server in pairs(installed_servers) do
 	opts = {
 		on_attach = require("config.lsp.handlers").on_attach,
 		capabilities = require("config.lsp.handlers").capabilities,
-        settings = {
-            Lua = { -- hide all those annoying "undefined global" messages
-                diagnostics = { globals = {"vim"}}
-            }
-        }
 	}
 
 	server = vim.split(server, "@")[1]
@@ -69,10 +64,3 @@ for _, server in pairs(installed_servers) do
 
 	lspconfig[server].setup(opts)
 end
-
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
