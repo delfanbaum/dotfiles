@@ -13,7 +13,8 @@ return {
     'saadparwaiz1/cmp_luasnip',
 
     -- linting
-    {'mfussenegger/nvim-lint',
+    {
+        'mfussenegger/nvim-lint',
         event = {
             "BufReadPre",
             "BufNewFile"
@@ -25,16 +26,21 @@ return {
     'rafamadriz/friendly-snippets',
 
     -- Treesitter
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
 
     -- Test runner
-    {"nvim-neotest/neotest",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-neotest/neotest-python",
-        "nvim-treesitter/nvim-treesitter",
-        "antoinemadec/FixCursorHold.nvim"
-      }
-    }
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-neotest/neotest-python",
+            "nvim-neotest/neotest-go",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim"
+        }
+    },
+
+    -- Language-specific
+    -- "fatih/vim-go"
 }

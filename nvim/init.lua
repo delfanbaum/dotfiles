@@ -1,5 +1,5 @@
 -- set leader to space before lazy (because it said so)
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- plugins
 require('config.lazy')
