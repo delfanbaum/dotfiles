@@ -38,7 +38,7 @@ brew install \
     curl \
     sass/sass/sass \
     luarocks \
-    go
+    go  # this is actually a shit way to install go on the pi, btw
 
 # install omzsh
 echo "Installing oh-my-zsh"
@@ -61,6 +61,10 @@ esac
 
 # install luacheck so we can work on files
 luarocks install luacheck
+
+# install rust (this may go away)
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
 
 # global gitignore
 git config --global core.excludesFile '~/.gitignore'
