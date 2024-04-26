@@ -12,10 +12,11 @@ npairs.setup {
         java = false,
     },
     disable_filetype = { "TelescopePrompt",
-                         "spectre_panel",
-                         "asciidoctor",
-                         "markdown"
-                       },
+        "spectre_panel",
+        "asciidoctor",
+        "asciidoc",
+        "markdown"
+    },
     fast_wrap = {
         map = "<M-e>",
         chars = { "{", "[", "(", '"', "'" },
@@ -32,6 +33,6 @@ npairs.setup {
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  return
+    return
 end
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
