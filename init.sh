@@ -65,6 +65,11 @@ luarocks install luacheck
 # install rust (this may go away)
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
-
 # global gitignore
 git config --global core.excludesFile '~/.gitignore'
+
+# global git aliases
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
