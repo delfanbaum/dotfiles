@@ -21,3 +21,7 @@ gtk-2.0
 
 # Ignore kitty, since only used for work demos with images
 kitty/
+
+# Ignore "active" simlinks
+alacritty/themes/active.toml
+tmux/themes/active.conf
