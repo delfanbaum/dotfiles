@@ -6,12 +6,12 @@ require('config.lazy')
 require('lazy').setup("plugins")
 
 -- basic configuration
+-- require('config.auto_dark_mode') Breaking italic display for some reason
 require('config.options')
 require('config.mappings')
 
 -- plugin configs
 require('config.autopairs')
-require('config.auto_dark_mode')
 require('config.cmp')
 require('config.comment')
 require('config.formatters')
