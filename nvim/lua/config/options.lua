@@ -37,7 +37,10 @@ vim.opt.clipboard = "unnamed"
 
 vim.opt.mouse = "nv"
 
--- colors now handled in auto_dark_mode.lua
+-- colorscheme may be updated by auto_dark_mode.lua
+vim.o.termguicolors = 1
+vim.o.background = 'dark'
+vim.cmd.colorscheme 'onedark'
 
 -- vim stuff
 vim.cmd [[:command W w]]
