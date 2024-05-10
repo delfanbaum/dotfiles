@@ -1,0 +1,1 @@
+/Users/delfanbaum/.config/nvim/lua/config/themes/dark.lua
