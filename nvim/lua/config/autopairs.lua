@@ -15,7 +15,7 @@ npairs.setup {
         "spectre_panel",
         "asciidoctor",
         "asciidoc",
-        "markdown"
+        "markdown",
     },
     fast_wrap = {
         map = "<M-e>",

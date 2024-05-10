@@ -2,7 +2,7 @@ local format = require 'config.formatters'
 
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-	return
+    return
 end
 
 -- add word count
@@ -21,29 +21,33 @@ end
 
 
 lualine.setup {
-  options = {
-      icons_enables = true,
-      theme = 'onedark',
-      component_separators = {
-          left = '|',
-          right = '|'
-      }
-  },
-  sections = {
-      lualine_a = {{ 'mode', fmt = function(str) return str:sub(1,1) end }},
-      lualine_b = {'branch', 'diff', 'diagnostics'},
-      lualine_c = {'filename'},
-      lualine_x = { word_count,
-                    -- 'encoding',
-                    -- {
-                    --     'filetype',
-                    --     icon_only = true,
-                    --     colored = false,
-                    --     icon = { align = 'right' },
-                    --     padding = { left = 1, right = 2}
-                    -- }
-                  },
-      lualine_y = {'progress'},
-      lualine_z = {'location'}
-  },
+    options = {
+        icons_enables = true,
+        -- theme = 'onedark',
+        component_separators = {
+            left = '|',
+            right = '|'
+        },
+        section_separators = {
+            left = '',  -- for now, let's have a home page
+            right = ''
+        },
+    },
+    sections = {
+        lualine_a = { { 'mode', fmt = function(str) return str:sub(1, 1) end } },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_c = { 'filename' },
+        lualine_x = { word_count,
+            -- 'encoding',
+            -- {
+            --     'filetype',
+            --     icon_only = true,
+            --     colored = false,
+            --     icon = { align = 'right' },
+            --     padding = { left = 1, right = 2}
+            -- }
+        },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' }
+    },
 }

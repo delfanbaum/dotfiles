@@ -4,6 +4,7 @@ nvim/lazy-lock.json
 
 # Ignore vale plugins
 vale/proselint
+vale/styles
 
 # Ignore any secrets
 .env
@@ -17,3 +18,6 @@ vale/proselint
 
 # Ignore GIMP settings (at least for now)
 gtk-2.0
+
+# Ignore kitty, since only used for work demos with images
+kitty/

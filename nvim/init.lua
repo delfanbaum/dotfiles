@@ -11,6 +11,7 @@ require('config.mappings')
 
 -- plugin configs
 require('config.autopairs')
+require('config.auto_dark_mode')
 require('config.cmp')
 require('config.comment')
 require('config.formatters')
