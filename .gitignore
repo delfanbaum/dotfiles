@@ -25,6 +25,7 @@ kitty/
 # Ignore "active" simlinks
 alacritty/themes/active.toml
 tmux/themes/active.conf
+nvim/lua/config/active_colors.lua
 
 # Ignore the uv directory until I have anything interesting in there
 uv/
