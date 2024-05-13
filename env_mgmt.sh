@@ -1,16 +1,24 @@
 #!/bin/bash
 
-device=$(tr -d '\0' < /sys/firmware/devicetree/base/model)
-if [[ $device =~ "Raspberry Pi" ]]; then
-    DOTS=~/Repos/dotfiles
-else
-    DOTS=~/.config
-fi
+system_info () {
+    DOTS=~/.config  # as default to be overridden
 
-NVIM_C=$DOTS/nvim/lua/config
+    if [[ "$(uname -s)" == "Darwin" ]]; then
+        OS="mac"
+    elif [[ "$(uname -s)" == "Linux" ]]; then
+        OS="linux"
+        device=$(tr -d '\0' < /sys/firmware/devicetree/base/model)
+        if [[ $device =~ "Raspberry Pi" ]]; then
+            DOTS=~/Repos/dotfiles
+        fi
+    else
+        echo "Are you lost?"
+        exit 1
+    fi
+    NVIM_C=$DOTS/nvim/lua/config
+}
 
 dark_mode () {
-  echo "Switching to dark mode..."
   ln -nfs $DOTS/alacritty/themes/onedark.toml $DOTS/alacritty/themes/active.toml
   ln -nfs $DOTS/tmux/themes/onedark.conf $DOTS/tmux/themes/active.conf
   ln -nfs $NVIM_C/themes/dark.lua $NVIM_C/active_colors.lua
@@ -18,7 +26,6 @@ dark_mode () {
 }
 
 light_mode () {
-  echo "Switching to light mode..."
   ln -nfs $DOTS/alacritty/themes/solarized-flat.toml $DOTS/alacritty/themes/active.toml
   ln -nfs $DOTS/tmux/themes/solarized-flat.conf $DOTS/tmux/themes/active.conf
   ln -nfs $NVIM_C/themes/light.lua $NVIM_C/active_colors.lua
@@ -26,17 +33,19 @@ light_mode () {
 }
 
 update_tmux () {
-    if [ ! -z $TMUX ]; then
+    if [ -n "$TMUX" ]; then
         tmux source-file $DOTS/tmux/tmux.conf
     fi
 }
 
+# main loop
+system_info
 
 if [ $# -eq 0 ]; then
     # automagic for macs if no args
-    if [[ "$(uname -s)" == "Darwin" ]]; then
+    if [[ "$OS" == "mac" ]]; then
       val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
-      if [ $val == "Dark" ]; then
+      if [[ $val == "Dark" ]]; then
           dark_mode
       else
           light_mode
@@ -44,9 +53,9 @@ if [ $# -eq 0 ]; then
     else
         echo "Can't determine system appearance; please provide manually"
     fi
-elif [ $1 == "dark" ]; then
+elif [ "$1" == "dark" ]; then
     dark_mode
-elif [ $1 == "light" ]; then
+elif [ "$1" == "light" ]; then
     light_mode
 else
     echo "Invalid argument; please choose 'light' or 'dark'"
