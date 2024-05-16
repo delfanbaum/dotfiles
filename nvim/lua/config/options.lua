@@ -37,8 +37,8 @@ vim.opt.clipboard = "unnamed"
 
 vim.opt.mouse = "nv"
 
--- colorscheme may be updated by auto_dark_mode.lua
-vim.o.termguicolors = 1
+-- Set automatically in nvim > 0.10
+-- vim.o.termguicolors = 1
 vim.o.background = 'dark'
 vim.cmd.colorscheme 'onedark'
 
