@@ -7,7 +7,7 @@ require('lazy').setup("plugins")
 
 -- basic configuration
 require('config.options')
-require('config.active_colors')
+-- require('config.active_colors')
 require('config.mappings')
 
 -- plugin configs
