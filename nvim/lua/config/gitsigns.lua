@@ -7,5 +7,5 @@ gitsigns.setup({
     -- Note for later: apparently this does a lot more that I should
     -- investigate.
     attach_to_untracked = true,
-    max_file_length = 40000
+    max_file_length = 10000
 })

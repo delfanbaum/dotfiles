@@ -6,6 +6,7 @@ require('config.lazy')
 require('lazy').setup("plugins")
 
 -- basic configuration
+require('config.onedarkpro')
 require('config.options')
 require('config.active_colors')
 require('config.mappings')
@@ -13,7 +14,6 @@ require('config.mappings')
 -- plugin configs
 require('config.autopairs')
 require('config.cmp')
-require('config.comment')
 require('config.formatters')
 require('config.gitsigns')
 require('config.lsp')

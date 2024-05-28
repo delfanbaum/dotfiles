@@ -4,5 +4,4 @@ return {
     'junegunn/fzf.vim',
     'tpope/vim-surround',
     'windwp/nvim-autopairs',
-    'numToStr/Comment.nvim',
 }
