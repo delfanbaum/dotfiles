@@ -44,4 +44,7 @@ return {
             "nvim-neotest/neotest-go",
         }
     },
+
+    -- non LSP language files
+    "imsnif/kdl.vim",
 }
