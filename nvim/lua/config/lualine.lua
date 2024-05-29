@@ -23,13 +23,12 @@ end
 lualine.setup {
     options = {
         icons_enables = true,
-        -- theme = 'onedark',
         component_separators = {
             left = '|',
             right = '|'
         },
         section_separators = {
-            left = '',  -- for now, let's have a home page
+            left = '', -- for now, let's have a home page
             right = ''
         },
     },
@@ -39,13 +38,13 @@ lualine.setup {
         lualine_c = { 'filename' },
         lualine_x = { word_count,
             -- 'encoding',
-            -- {
-            --     'filetype',
-            --     icon_only = true,
-            --     colored = false,
-            --     icon = { align = 'right' },
-            --     padding = { left = 1, right = 2}
-            -- }
+            {
+                'filetype',
+                icon_only = false,
+                colored = false,
+                icon = { align = 'right' },
+                padding = { left = 1, right = 1 }
+            }
         },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
