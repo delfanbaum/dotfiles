@@ -29,10 +29,11 @@ local maps = {
     {'n', '<leader>z', '1z=', noremap_silent},
 
     -- Nerdtree
-    {'','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>', noremap_silent},
+    -- {'','<C-e>', ':NERDTreeToggle<CR> | :wincmd p<CR>', noremap_silent},
 
     -- fzf
-    {'','<C-p>', ':Files<CR>', noremap},
+    {'','<C-p>', ':Files<CR>', noremap}, -- keep for when not in zellij
+    {'','<C-e>', ':Files<CR>', noremap},
 
     -- Dap
     {'n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<cr>",  empty},
