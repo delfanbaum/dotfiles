@@ -29,3 +29,7 @@ nvim/lua/config/active_colors.lua
 
 # Ignore the uv directory until I have anything interesting in there
 uv/
+
+# Ignore config.kdl until live reload is a thing; this is a dark/light mode
+# workaround
+zellij/config.kdl
