@@ -22,13 +22,17 @@ dark_mode () {
   ln -nfs $DOTS/alacritty/themes/onedark.toml $DOTS/alacritty/themes/active.toml
   ln -nfs $DOTS/tmux/themes/onedark.conf $DOTS/tmux/themes/active.conf
   ln -nfs $NVIM_C/themes/dark.lua $NVIM_C/active_colors.lua
+  # note that zellij will only pick up for new sessions
+  ln -nfs $DOTS/zellij/config-dark.kdl $DOTS/zellij/config.kdl 
   update_tmux
 }
 
 light_mode () {
-  ln -nfs $DOTS/alacritty/themes/solarized-flat.toml $DOTS/alacritty/themes/active.toml
+  ln -nfs $DOTS/alacritty/themes/onedark-light.toml $DOTS/alacritty/themes/active.toml
   ln -nfs $DOTS/tmux/themes/solarized-flat.conf $DOTS/tmux/themes/active.conf
   ln -nfs $NVIM_C/themes/light.lua $NVIM_C/active_colors.lua
+  # note that zellij will only pick up for new sessions
+  ln -nfs $DOTS/zellij/config-light.kdl $DOTS/zellij/config.kdl 
   update_tmux
 }
 

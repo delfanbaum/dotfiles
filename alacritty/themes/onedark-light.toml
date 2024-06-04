@@ -1,0 +1,34 @@
+# Colors adapted from github.com/olimorris/onedarkpro.nvim
+# light mode
+
+[colors.primary]
+background = '0xfafafa'
+foreground = '0x6a6a6a'
+
+[colors.normal]
+black = '0x6a6a6a'
+red = '0xe05661'
+green = '0x1da912'
+yellow = '0xeea825'
+blue = '0x118dc3'
+magenta = '0x9a77cf'
+cyan = '0x56b6c2'
+white = '0xfafafa'
+
+[colors.bright]
+black = '0x848484'
+red = '0xe88189'
+green = '0x25d717'
+yellow = '0xf2bb54'
+blue = '0x1caceb'
+magenta = '0xb69ddc'
+cyan = '0x7bc6d0'
+white = '0xffffff'
+
+[colors.cursor]
+text = 'CellBackground'
+cursor = 'CellForeground' # syntax-cursor-color
+
+[colors.selection]
+text = 'CellForeground'
+background = '0xbebebe'
