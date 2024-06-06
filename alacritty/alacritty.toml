@@ -52,6 +52,7 @@ multiplier = 3
 [window]
 decorations = "buttonless"
 dynamic_title = false
+dynamic_padding = true
 title = "Alacritty"
 
 [window.dimensions]
@@ -59,5 +60,5 @@ columns = 100
 lines = 45
 
 [window.padding]
-x = 15
-y = 15
+x = 10
+y = 10
