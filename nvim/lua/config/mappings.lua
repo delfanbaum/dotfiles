@@ -18,8 +18,9 @@ local maps = {
     { 'n', '<leader>z',   '1z=',                                                         noremap_silent },
 
     -- fzf
-    { '',  '<C-p>',       ':FzfLua files<CR>',                                           noremap },
-    { '',  '<C-e>',       ':FzfLua files<CR>',                                           noremap },
+    -- { 'n', '<C-p>',       ':FzfLua files<CR>',                                           noremap_silent },
+    { 'n', '<C-e>',       ':FzfLua files<CR>',                                           noremap_silent },
+    { 'n', "<leader>rg",  ":FzfLua grep_project<CR>",                                     noremap_silent },
 
     -- Dap
     { 'n', '<leader>dt',  "<cmd>lua require'dap'.toggle_breakpoint()<cr>",               empty },

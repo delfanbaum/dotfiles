@@ -24,7 +24,7 @@ drop.setup({
         }
     },
     max = 50,                                        -- maximum number of drops on the screen
-    interval = 300,                                  -- every 300ms update the drops
+    interval = 500,                                  -- every half second update the drops
     screensaver = 1000 * 60 * 1,                     -- show after 1 minutes
     filetypes = { "dashboard", "alpha", "starter" }, -- enable/disable automatically for fts
 })
