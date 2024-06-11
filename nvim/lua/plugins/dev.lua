@@ -29,7 +29,7 @@ return {
     'rafamadriz/friendly-snippets',
 
     -- Treesitter
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = false },
 
 
     -- Test runner
@@ -42,6 +42,10 @@ return {
             "nvim-treesitter/nvim-treesitter",
             "nvim-neotest/neotest-python",
             "nvim-neotest/neotest-go",
+        },
+        ft = {
+            "python",
+            "golang"
         }
     },
 
