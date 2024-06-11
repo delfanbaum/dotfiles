@@ -20,3 +20,12 @@ alias devc_exec="devcontainer exec --workspace-folder ."
 
 # ruby
 alias be='bundle exec'
+
+# zellij
+alias za='zellij attach'
+alias zs='zellij attach --create'
+alias zl='zellij list-sessions'
+alias zk='zellij kill-sessions'
+alias zka='zellij kill-all-sessions'
+alias zd='zellij d'
+alias zda='zellij delete-all-sessions'
