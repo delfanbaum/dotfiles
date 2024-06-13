@@ -51,4 +51,7 @@ return {
 
     -- non LSP language files
     "imsnif/kdl.vim",
+
+    -- diffs
+    "sindrets/diffview.nvim" 
 }

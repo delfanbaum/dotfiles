@@ -9,4 +9,5 @@ return {
     "eandrju/cellular-automaton.nvim",
     "folke/drop.nvim",
     'goolord/alpha-nvim',
+    "nkakouros-original/numbers.nvim",
 }
