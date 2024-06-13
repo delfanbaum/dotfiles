@@ -1,5 +1,13 @@
 return {
     -- Markdown
-    'godlygeek/tabular',
-    'preservim/vim-markdown'
+    {
+        'preservim/vim-markdown',
+        lazy = true,
+        ft = { "markdown" }
+    },
+    {
+        'godlygeek/tabular',
+        lazy = true,
+        ft = { "markdown" }
+    },
 }

@@ -1,16 +1,28 @@
 return {
     -- Language Servers
-    'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
+    {
+        "williamboman/mason.nvim",
+        lazy = true,
+        cmd = { "Mason" },
+        dependencies = {
+            "williamboman/mason-lspconfig.nvim",
+        },
+    },
+
 
     -- completion
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'saadparwaiz1/cmp_luasnip',
+    {
+        'hrsh7th/nvim-cmp',
+        event = "InsertEnter",
+        dependencies = {
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'saadparwaiz1/cmp_luasnip',
+            'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
+        }
+    },
 
     -- linting
     {
@@ -24,9 +36,13 @@ return {
     -- Snippets
     {
         'L3MON4D3/LuaSnip',
-        build = "make install_jsregexp"
+        lazy = true,
+        build = "make install_jsregexp",
+        event = "InsertEnter",
+        dependencies = {
+            'rafamadriz/friendly-snippets',
+        }
     },
-    'rafamadriz/friendly-snippets',
 
     -- Treesitter
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = false },
@@ -50,8 +66,20 @@ return {
     },
 
     -- non LSP language files
-    "imsnif/kdl.vim",
+    {
+        "imsnif/kdl.vim",
+        lazy = true,
+        ft = {
+            "kdl"
 
-    -- diffs
-    "sindrets/diffview.nvim" 
+        }
+    },
+
+    -- git things
+    'lewis6991/gitsigns.nvim',
+    {
+        "sindrets/diffview.nvim",
+        lazy = true,
+        cmd = { "DiffviewOpen" }
+    }
 }
