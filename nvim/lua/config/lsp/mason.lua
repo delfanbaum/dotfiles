@@ -47,8 +47,9 @@ if not lspconfig_status_ok then
     return
 end
 
-local opts = {}
 local installed_servers = mason_lspconfig.get_installed_servers()
+
+local opts = {}
 
 for _, server in pairs(installed_servers) do
     opts = {
@@ -65,3 +66,4 @@ for _, server in pairs(installed_servers) do
 
     lspconfig[server].setup(opts)
 end
+

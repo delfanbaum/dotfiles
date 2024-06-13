@@ -16,10 +16,12 @@ local ensure_install = {
     "css",
     "yaml",
     "ruby",
+    "rust",
     "markdown",
     "markdown_inline",
     "glimmer",
-    "regex"
+    "regex",
+    "vimdoc"
 }
 
 configs.setup({
