@@ -11,6 +11,7 @@ onedark.setup({
     },
     highlights = {  -- bring back the pretty purple italics please
         asciidocQuotedEmphasized = { fg = "#c678dd", italic = true },
+        SpellCap = {fg = "#e5c07b"},
     }
 
 })
