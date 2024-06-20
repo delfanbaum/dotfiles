@@ -10,7 +10,6 @@ return {
         },
     },
 
-
     -- completion
     {
         'hrsh7th/nvim-cmp',
@@ -20,7 +19,7 @@ return {
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-cmdline',
             'saadparwaiz1/cmp_luasnip',
-            'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
+            'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
         }
     },
 
@@ -57,11 +56,9 @@ return {
             "antoinemadec/FixCursorHold.nvim",
             "nvim-treesitter/nvim-treesitter",
             "nvim-neotest/neotest-python",
-            "nvim-neotest/neotest-go",
         },
         ft = {
             "python",
-            "golang"
         }
     },
 

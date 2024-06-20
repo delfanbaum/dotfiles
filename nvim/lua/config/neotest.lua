@@ -5,13 +5,10 @@ end
 
 -- adapters
 local python = require "neotest-python"
-local golang = require "neotest-go"
+-- local golang = require "neotest-go"
 
 neotest.setup({
     adapters = {
-        golang({
-            args = { "-count=1", "-timehout=60s" }
-        }),
         python({
             runner = "pytest",
             dap = {

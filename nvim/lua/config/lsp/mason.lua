@@ -1,15 +1,13 @@
 local default_install = { -- "ensure installed" list
     "ruff_lsp",
-    "eslint",
     "pyright",
     "bashls",
+    "eslint",
     "jsonls",
-    "yamlls",
-    "glint",
     "tailwindcss",
-    "gopls",
     "lua_ls",
     "rust_analyzer",
+    "yamlls",
 }
 
 local settings = {
@@ -66,4 +64,3 @@ for _, server in pairs(installed_servers) do
 
     lspconfig[server].setup(opts)
 end
-

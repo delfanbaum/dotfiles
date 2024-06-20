@@ -16,36 +16,35 @@ then
     echo "Homebrew is not yet supported on ARM Linux :("
   else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Installing all the things..."
+    brew install \
+        alacritty \
+        neovim \
+        tmux \
+        asciidoctor \
+        bat \
+        pyvenv \
+        node \
+        fzf \
+        ripgrep \
+        pyenv \
+        rbenv \
+        ruby-build \
+        node \
+        wget \
+        curl \
+        sass/sass/sass \
+        luarocks \
+        # go  # this is actually a shit way to install go on the pi, btw
   fi
 fi
-
-echo "Installing all the things..."
-brew install \
-    alacritty \
-    neovim \
-    tmux \
-    asciidoctor \
-    bat \
-    pyvenv \
-    node \
-    fzf \
-    ripgrep \
-    pyenv \
-    rbenv \
-    ruby-build \
-    node \
-    wget \
-    curl \
-    sass/sass/sass \
-    luarocks \
-    go  # this is actually a shit way to install go on the pi, btw
 
 # install omzsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Grab some fonts
-echo "Pulling down our temrinal font..."
+echo "Pulling down our terminal font..."
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/IBMPlexMono.zip
 
 echo "Moving config files..."
@@ -61,6 +60,11 @@ esac
 
 # install luacheck so we can work on files
 luarocks install luacheck
+
+# install some language serves we need to install via npm
+npm i -g vscode-langservers-extracted \ 
+    @tailwindcss/language-server \
+    bash-language-server
 
 # install rust (this may go away)
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
