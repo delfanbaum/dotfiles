@@ -1,22 +1,25 @@
 local nvim_lint_status_ok, nvim_lint = pcall(require, "lint")
 if not nvim_lint_status_ok then
-	return
+    return
 end
 
 nvim_lint.linters_by_ft = {
-    bash = {"shellcheck"},
-    css = {"stylelint"},
+    bash = { "shellcheck" },
+    css = { "stylelint" },
     javascript = { "eslint_d" },
-    json = {"jsonlint"},
+    json = { "jsonlint" },
     lua = { "luacheck" },
     python = { "ruff" },
-    scss = {"stylelint"},
-    yaml = {"yamllint"},
+    htmldjango = { "curlylint" },
+    scss = { "stylelint" },
+    yaml = { "yamllint" },
 }
 
 vim.api.nvim_create_autocmd(
     { "BufWinEnter", "BufWritePost", "InsertLeave", "TextChanged" },
-    { callback = function()
-        nvim_lint.try_lint()
-      end, }
+    {
+        callback = function()
+            nvim_lint.try_lint()
+        end,
+    }
 )
