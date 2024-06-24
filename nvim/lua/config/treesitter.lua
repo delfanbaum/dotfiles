@@ -14,6 +14,8 @@ local ensure_install = {
     "typescript",
     "tsx",
     "css",
+    "html",
+    "htmldjango",
     "yaml",
     "ruby",
     "rust",
