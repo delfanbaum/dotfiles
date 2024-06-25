@@ -1,0 +1,32 @@
+layout {
+    tab name="editor" focus=true {
+        pane command="nvim" borderless=true
+        pane size=1 borderless=true {
+            plugin location="compact-bar"
+        }
+    }
+    tab name="runners" split_direction="horizontal" {
+        pane command="poetry" {
+            args "run" "python" "manage.py" "runserver" "9000"
+            start_suspended true
+        } 
+        pane command="sass" {
+            args "--watch" "static/styles/main.scss:static/styles/main.css"
+            start_suspended true
+        }
+        pane size=1 borderless=true {
+            plugin location="compact-bar"
+        }
+    }
+    swap_floating_layout {
+        floating_panes {
+            pane {
+                x "10%"
+                y "10%"
+                width "80%"
+                height "80%"
+            }
+        }
+    }
+}
+pane_frames true
