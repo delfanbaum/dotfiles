@@ -85,7 +85,16 @@ return {
         'saecki/crates.nvim',
         tag = 'stable',
         config = function()
-            require('crates').setup()
+            require('crates').setup({
+                lsp = {
+                    enabled = true,
+                    -- this is inelegant, isn't it?
+                    on_attach = require("config.lsp.handlers").on_attach,
+                    actions = true,
+                    completion = true,
+                    hover = true
+                }
+            })
         end,
     }
 }
