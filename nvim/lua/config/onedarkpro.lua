@@ -9,9 +9,13 @@ onedark.setup({
         git_change = "#e5c07b",
         git_delete = "#e06c75",
     },
-    highlights = {  -- bring back the pretty purple italics please
+    highlights = { -- bring back the pretty purple italics please
         asciidocQuotedEmphasized = { fg = "#c678dd", italic = true },
-        SpellCap = {fg = "#e5c07b"},
+        SpellCap = { fg = "#e5c07b" },
+    },
+    options = {
+        cursorline = true
     }
+
 
 })

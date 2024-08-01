@@ -5,6 +5,7 @@ vim.opt.spelllang = 'en_us'     -- spelling is good!
 vim.opt.spellsuggest = 'best,5' -- spelling is good!
 vim.opt.number = true -- show line number
 vim.opt.relativenumber = true   -- add rel line numbers
+vim.opt.cursorline = true   -- to see if I like it
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 vim.opt.backup = false    -- no backup file;

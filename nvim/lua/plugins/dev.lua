@@ -78,5 +78,14 @@ return {
         "sindrets/diffview.nvim",
         lazy = true,
         cmd = { "DiffviewOpen" }
+    },
+
+    -- crates
+    {
+        'saecki/crates.nvim',
+        tag = 'stable',
+        config = function()
+            require('crates').setup()
+        end,
     }
 }

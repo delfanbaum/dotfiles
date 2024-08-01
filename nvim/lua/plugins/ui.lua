@@ -19,7 +19,11 @@ return {
     },
 
     -- fun things
-    "folke/drop.nvim",
+    {
+        "folke/drop.nvim",
+        tag = "v1.1.0" -- custom theme API changed and docs haven't been updated
+
+    },
     'goolord/alpha-nvim',
     {
         "eandrju/cellular-automaton.nvim",
