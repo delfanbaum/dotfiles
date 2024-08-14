@@ -25,7 +25,7 @@ M.setup = function()
     local config = {
         virtual_text = false, -- disable virtual text
         signs = {
-            active = signs, -- show signs
+            active = signs,   -- show signs
         },
         update_in_insert = true,
         underline = true,
@@ -73,6 +73,7 @@ end
 
 M.on_attach = function(client, bufnr)
     lsp_keymaps(bufnr)
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 end
 
 return M
