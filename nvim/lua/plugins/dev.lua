@@ -56,9 +56,11 @@ return {
             "antoinemadec/FixCursorHold.nvim",
             "nvim-treesitter/nvim-treesitter",
             "nvim-neotest/neotest-python",
+            "rouge8/neotest-rust"
         },
         ft = {
             "python",
+            "rust",
         }
     },
 

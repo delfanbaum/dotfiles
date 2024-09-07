@@ -3,6 +3,7 @@ local default_install = { -- "ensure installed" list
     "pyright",
     "bashls",
     "eslint",
+    "gopls",
     "html",
     "jsonls",
     "emmet_language_server",

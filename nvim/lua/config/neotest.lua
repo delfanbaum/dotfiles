@@ -5,6 +5,7 @@ end
 
 -- adapters
 local python = require "neotest-python"
+local rust = require "neotest-rust"
 -- local golang = require "neotest-go"
 
 neotest.setup({
@@ -15,7 +16,8 @@ neotest.setup({
                 justMyCode = false,
                 console = "integratedTerminal"
             }
-        })
+        }),
+        rust({})
     },
     output = {
         enabled = true,
