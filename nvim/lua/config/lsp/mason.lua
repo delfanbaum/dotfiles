@@ -12,6 +12,8 @@ local default_install = { -- "ensure installed" list
     "lua_ls",
     "rust_analyzer",
     "yamlls",
+    "solargraph",
+    -- "ruby_lsp"
 }
 
 local settings = {

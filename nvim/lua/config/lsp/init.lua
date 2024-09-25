@@ -7,7 +7,8 @@ if not status_ok then
   return
 end
 
--- override to speed up pyenv
+-- override to speed up pyenv, rbenv
 vim.cmd([[
     let g:python3_host_prog = '~/.pyenv/shims/python'
+    let g:ruby_host_prog = '~/.rbenv/shims/ruby'
 ]])
