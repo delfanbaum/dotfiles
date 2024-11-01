@@ -25,3 +25,10 @@ require('config.twilight')
 require('config.zenmode')
 require('config.drops')
 require('config.alpha_nvim')
+
+-- override to speed up pyenv, rbenv
+vim.cmd([[
+    let g:python3_host_prog = '~/.pyenv/shims/python'
+    let g:ruby_host_prog = '~/.rbenv/shims/ruby'
+    autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
+]])
