@@ -10,7 +10,7 @@ return {
             buildScripts = {
                 enable = true,
             },
-            features = { "exercises" }  -- for rustlings
+            features = { "all" }  -- for all features always
         },
         procMacro = {
             enable = true

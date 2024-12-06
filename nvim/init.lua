@@ -30,5 +30,5 @@ require('config.alpha_nvim')
 vim.cmd([[
     let g:python3_host_prog = '~/.pyenv/shims/python'
     let g:ruby_host_prog = '~/.rbenv/shims/ruby'
-    au BufRead,BufNewFile *.tera set filetype=htmldjango
+    autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
 ]])

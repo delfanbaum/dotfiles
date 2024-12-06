@@ -30,4 +30,5 @@ return {
         lazy = true,
         cmd = { "CellularAutomaton " }
     },
+    "sphamba/smear-cursor.nvim",
 }
