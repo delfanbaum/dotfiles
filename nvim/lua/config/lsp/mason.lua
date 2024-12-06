@@ -1,9 +1,9 @@
 local default_install = { -- "ensure installed" list
-    "ruff_lsp",
+    "ruff",
     "pyright",
     "bashls",
     "eslint",
-    "gopls",
+    -- "gopls",
     "html",
     "jsonls",
     "emmet_language_server",
