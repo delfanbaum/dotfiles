@@ -31,4 +31,8 @@ return {
         cmd = { "CellularAutomaton " }
     },
     "sphamba/smear-cursor.nvim",
+
+    {
+        "HiPhish/rainbow-delimiters.nvim",
+    }
 }
