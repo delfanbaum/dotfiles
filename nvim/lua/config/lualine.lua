@@ -13,7 +13,11 @@ local function word_count()
         asciidoc = true
     }
     if fts[vim.bo.filetype] then
-        return format.comma_value(vim.fn.wordcount().words) .. " words"
+        if vim.api.nvim_get_mode().mode == "V" then
+            return format.comma_value(vim.fn.wordcount().visual_words) .. " words"
+        else
+            return format.comma_value(vim.fn.wordcount().words) .. " words"
+        end
     else
         return ''
     end
