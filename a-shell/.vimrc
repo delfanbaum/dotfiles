@@ -35,6 +35,7 @@ noremap <CR> :noh<CR><CR>
 " prose
 set wrap
 set linebreak
+set textwidth=80
 
 " spelling
 set spell
@@ -75,18 +76,6 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
-" word count function
-function WordCount()
-    if has_key(wordcount(),'visual_words')
-        " count selected words
-        let g:word_count=wordcount().visual_words."/".wordcount().words
-    else
-        " or shows words 'so far'
-        let g:word_count=wordcount().cursor_words."/".wordcount().words
-    endif
-    return g:word_count
-endfunction
-
 " lightline
 set laststatus=2
 set noshowmode
@@ -94,7 +83,7 @@ let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ 'active': {
       \     'left': [ [ 'mode' ], [ 'filename' ], [ 'modified' ] ],
-      \     'right': [ [ 'lineinfo' ], [ 'wordcount'], [ 'percent' ] ]
+      \     'right': [ [ 'lineinfo' ], [ 'percent' ] ]
       \   },
       \ 'mode_map': {
         \ 'n' : 'N',
@@ -109,7 +98,6 @@ let g:lightline = {
         \ "\<C-s>": 'SB',
         \ 't': 'T',
         \ },
-      \ 'component_function': {
-      \   'wordcount': 'WordCount',
-      \ },
       \ }
+
+set path+=**/*
