@@ -1,19 +1,21 @@
 return {
     settings = {
-        imports = {
-            granularity = {
-                group = "module",
+        ['rust-analyzer'] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
             },
-            prefix = "self",
-        },
-        cargo = {
-            buildScripts = {
-                enable = true,
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+                features = { "all" } -- for all features always
             },
-            features = { "all" }  -- for all features always
-        },
-        procMacro = {
-            enable = true
-        },
+            procMacro = {
+                enable = true
+            },
+        }
     }
 }

@@ -70,7 +70,6 @@ return {
         lazy = true,
         ft = {
             "kdl"
-
         }
     },
 
@@ -82,7 +81,7 @@ return {
         cmd = { "DiffviewOpen" }
     },
 
-    -- crates
+    -- rust
     {
         'saecki/crates.nvim',
         tag = 'stable',
@@ -98,5 +97,19 @@ return {
                 }
             })
         end,
+    },
+    -- {
+    --     "cordx56/rustowl",
+    --     dependencies = { "neovim/nvim-lspconfig" },
+    --     ft = {
+    --         "rust"
+    --     }
+    -- }
+
+    -- typescript
+    {
+        "pmizio/typescript-tools.nvim",
+        dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+        opts = {},
     }
 }
