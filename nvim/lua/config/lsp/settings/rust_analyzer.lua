@@ -11,7 +11,7 @@ return {
                 buildScripts = {
                     enable = true,
                 },
-                features = { "all" } -- for all features always
+                features = "all" -- for all features always
             },
             procMacro = {
                 enable = true
