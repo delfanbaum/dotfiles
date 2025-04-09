@@ -7,13 +7,11 @@ local default_install = { -- "ensure installed" list
     "html",
     "jsonls",
     "emmet_language_server",
-    "somesass_ls",
-    -- "tailwindcss",
+    "cssls",
     "lua_ls",
     "rust_analyzer",
     "yamlls",
     "solargraph",
-    -- "ruby_lsp"
 }
 
 local settings = {
