@@ -28,7 +28,8 @@ require('config.alpha_nvim')
 
 -- override to speed up pyenv, rbenv, also set .tera filetypes
 vim.cmd([[
-    let g:python3_host_prog = '~/.pyenv/shims/python'
-    let g:ruby_host_prog = '~/.rbenv/shims/ruby'
+    let g:python3_host_prog = '~/.asdf/shims/python'
+    let g:ruby_host_prog = '~/.asdf/shims/ruby'
     autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 ]])
