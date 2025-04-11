@@ -23,19 +23,13 @@ then
         tmux \
         asciidoctor \
         bat \
-        pyvenv \
-        node \
         fzf \
         ripgrep \
-        pyenv \
-        rbenv \
-        ruby-build \
-        node \
+        asdf \
         wget \
         curl \
         sass/sass/sass \
         luarocks \
-        # go  # this is actually a shit way to install go on the pi, btw
   fi
 fi
 
@@ -64,10 +58,14 @@ luarocks install luacheck
 # install some language serves we need to install via npm
 npm i -g vscode-langservers-extracted \ 
     @tailwindcss/language-server \
-    bash-language-server
+    bash-language-server \
+    eslint_d
 
 # install rust (this may go away)
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
+# install zellij
+cargo install --locked zellij
 
 # global gitignore
 git config --global core.excludesFile '~/.gitignore'
