@@ -61,14 +61,20 @@ npm i -g vscode-langservers-extracted \
     bash-language-server \
     eslint_d
 
-# install rust (this may go away)
+# install rust
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
+# install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # install zellij
 cargo install --locked zellij
 
 # global gitignore
 git config --global core.excludesFile '~/.gitignore'
+
+# global pyrightconfig
+cp ~/.config/pyrightconfig.json ~/pyrightconfig.json
 
 # global git aliases
 git config --global alias.co checkout
