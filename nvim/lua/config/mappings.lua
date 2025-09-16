@@ -18,9 +18,26 @@ local maps = {
     { 'n', '<leader>z',   '1z=',                                                         noremap_silent },
 
     -- fzf
-    -- { 'n', '<C-p>',       ':FzfLua files<CR>',                                           noremap_silent },
     { 'n', '<C-e>',       ':FzfLua files<CR>',                                           noremap_silent },
-    { 'n', "<leader>rg",  ":FzfLua grep_project<CR>",                                     noremap_silent },
+    { 'n', "<leader>rg",  ":FzfLua grep_project<CR>",                                    noremap_silent },
+
+    -- LSP
+    --
+    { "n", "gD",          "<cmd>lua vim.lsp.buf.declaration()<CR>",                      noremap_silent },
+    { "n", "gd",          "<cmd>lua vim.lsp.buf.definition()<CR>",                       noremap_silent },
+    { "n", "K",           "<cmd>lua vim.lsp.buf.hover()<CR>",                            noremap_silent },
+    { "n", "gI",          "<cmd>lua vim.lsp.buf.implementation()<CR>",                   noremap_silent },
+    { "n", "gr",          "<cmd>lua vim.lsp.buf.references()<CR>",                       noremap_silent },
+    { "n", "gl",          "<cmd>lua vim.diagnostic.open_float()<CR>",                    noremap_silent },
+    { "n", "<leader>lf",  "<cmd>lua vim.lsp.buf.format{ async = true }<cr>",             noremap_silent },
+    { "n", "<leader>li",  "<cmd>LspInfo<cr>",                                            noremap_silent },
+    { "n", "<leader>lI",  "<cmd>LspInstallInfo<cr>",                                     noremap_silent },
+    { "n", "<leader>la",  "<cmd>lua vim.lsp.buf.code_action()<cr>",                      noremap_silent },
+    { "n", "<leader>lj",  "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>",           noremap_silent },
+    { "n", "<leader>lk",  "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>",           noremap_silent },
+    { "n", "<leader>lr",  "<cmd>lua vim.lsp.buf.rename()<cr>",                           noremap_silent },
+    { "n", "<leader>ls",  "<cmd>lua vim.lsp.buf.signature_help()<CR>",                   noremap_silent },
+    { "n", "<leader>lq",  "<cmd>lua vim.diagnostic.setloclist()<CR>",                    noremap_silent },
 
     -- Dap
     { 'n', '<leader>dt',  "<cmd>lua require'dap'.toggle_breakpoint()<cr>",               empty },
