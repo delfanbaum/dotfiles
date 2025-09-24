@@ -2,12 +2,18 @@ return {
     -- Language Servers
     "neovim/nvim-lspconfig",
     {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         lazy = true,
         cmd = { "Mason" },
+    },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {},
         dependencies = {
-            "williamboman/mason-lspconfig.nvim",
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
         },
+
     },
 
     -- completion
@@ -90,7 +96,7 @@ return {
                 lsp = {
                     enabled = true,
                     -- this is inelegant, isn't it?
-                    on_attach = require("config.lsp.handlers").on_attach,
+                    on_attach = require("config.handlers").on_attach,
                     actions = true,
                     completion = true,
                     hover = true
