@@ -5,10 +5,20 @@ return {
         "mason-org/mason.nvim",
         lazy = true,
         cmd = { "Mason" },
+        opts = {
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                }
+            }
+        }
     },
     {
         "mason-org/mason-lspconfig.nvim",
         opts = {},
+        lazy = false,
         dependencies = {
             { "mason-org/mason.nvim", opts = {} },
             "neovim/nvim-lspconfig",
