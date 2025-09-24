@@ -1,5 +1,7 @@
 return {
     settings = {
-        diagnostics = { globals = { "vim" } }
+        Lua = {
+            diagnostics = { globals = { "vim" } }
+        }
     }
 }
