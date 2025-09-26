@@ -2,18 +2,26 @@ return {
     -- Language Servers
     "neovim/nvim-lspconfig",
     {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         lazy = true,
         cmd = { "Mason" },
+    },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {},
+        lazy = true,
         dependencies = {
-            "williamboman/mason-lspconfig.nvim",
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
         },
+
     },
 
     -- completion
     {
         'hrsh7th/nvim-cmp',
         event = "InsertEnter",
+        lazy = true,
         dependencies = {
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
@@ -50,6 +58,7 @@ return {
     -- Test runner
     {
         "nvim-neotest/neotest",
+        lazy = true,
         dependencies = {
             "nvim-neotest/nvim-nio",
             "nvim-lua/plenary.nvim",
@@ -58,10 +67,7 @@ return {
             "nvim-neotest/neotest-python",
             "rouge8/neotest-rust"
         },
-        ft = {
-            "python",
-            "rust",
-        }
+        keys = { "<leader>tr", "<leader>tf", "<leader>td", "<leader>ti" }
     },
 
     -- non LSP language files
@@ -85,17 +91,9 @@ return {
     {
         'saecki/crates.nvim',
         tag = 'stable',
+        event = { "BufRead Cargo.toml" },
         config = function()
-            require('crates').setup({
-                lsp = {
-                    enabled = true,
-                    -- this is inelegant, isn't it?
-                    on_attach = require("config.lsp.handlers").on_attach,
-                    actions = true,
-                    completion = true,
-                    hover = true
-                }
-            })
+            require('crates').setup()
         end,
     },
     -- {
@@ -109,7 +107,14 @@ return {
     -- typescript
     {
         "pmizio/typescript-tools.nvim",
+        lazy = true,
         dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
         opts = {},
+        ft = {
+            "js",
+            "ts",
+            "jsx",
+            "tsx",
+        }
     }
 }
