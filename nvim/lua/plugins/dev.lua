@@ -9,7 +9,6 @@ return {
     {
         "mason-org/mason-lspconfig.nvim",
         opts = {},
-        lazy = true,
         dependencies = {
             { "mason-org/mason.nvim", opts = {} },
             "neovim/nvim-lspconfig",
@@ -21,7 +20,6 @@ return {
     {
         'hrsh7th/nvim-cmp',
         event = "InsertEnter",
-        lazy = true,
         dependencies = {
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
