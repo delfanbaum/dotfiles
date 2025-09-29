@@ -75,7 +75,9 @@ return {
             "nvim-neotest/neotest-python",
             "rouge8/neotest-rust"
         },
-        keys = { "<leader>tr", "<leader>tf", "<leader>td", "<leader>ti" }
+        ft = {
+            "py"
+        }
     },
 
     -- non LSP language files
