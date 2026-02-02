@@ -1,44 +1,39 @@
 # Ensure home is where the heart is
 echo "XDG_CONFIG_HOME=$HOME" >> ~/.profile
 
-if [ $(uname) == "Darwin"]; then
-  xcode-select --install
+if [ $(uname) == "Darwin" ]; then
+ xcode-select --install
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-if [ $(uname) == "Linux"]; then
-  apt-get update && apt-get install git gcc clang -y
+if [ $(uname) == "Linux" ]; then
+ apt-get update && apt-get install gcc clang -y
 fi
 
-# Install Homebrew (slow, but maybe keeps everything else simpler)
-if ! command brew -v &> /dev/null 
-then
-  if [ $(uname -m) == "arm64" ] && [ $(uname) == "Linux"]; then
-    echo "Homebrew is not yet supported on ARM Linux :("
-  else
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo "Installing all the things..."
-    brew install \
-        alacritty \
-        neovim \
-        tmux \
-        asciidoctor \
-        bat \
-        fzf \
-        ripgrep \
-        asdf \
-        wget \
-        curl \
-        sass/sass/sass \
-        luarocks \
-  fi
-fi
+## Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo "Installing all the things..."
+brew install \
+    git \
+    alacritty \
+    neovim \
+    tmux \
+    bat \
+    fzf \
+    ripgrep \
+    wget \
+    curl \
+    node \
+    luarocks \
+    yamllint
 
 # install omzsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Grab some fonts
-echo "Pulling down our terminal font..."
+echo "Pulling down the terminal font..."
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/IBMPlexMono.zip
 
 echo "Moving config files..."
