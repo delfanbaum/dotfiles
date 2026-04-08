@@ -1,6 +1,8 @@
 -- screensaver
 local drop_status_ok, drop = pcall(require, "drop")
-if not drop_status_ok then
+
+-- don't use this on neovide since it creates a weird blur I don't like
+if not drop_status_ok or vim.g.neovide then
     return
 end
 

@@ -26,6 +26,7 @@ require('config.drops')
 require('config.alpha_nvim')
 require('config.nvim-lint')
 
+
 vim.cmd([[
     autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
     autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
