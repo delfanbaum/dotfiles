@@ -60,7 +60,7 @@ return {
     },
 
     -- Treesitter
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = false },
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = false, branch = "main" },
 
 
     -- Test runner

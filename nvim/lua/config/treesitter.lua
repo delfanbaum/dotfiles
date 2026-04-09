@@ -1,4 +1,4 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+local status_ok, treesitter = pcall(require, "nvim-treesitter")
 if not status_ok then
 	return
 end
@@ -26,7 +26,7 @@ local ensure_install = {
     "vimdoc"
 }
 
-configs.setup({
+treesitter.setup({
   ensure_installed = ensure_install, -- one of "all" or a list of languages
 	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
 	highlight = {
