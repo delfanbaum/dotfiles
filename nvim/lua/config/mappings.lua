@@ -78,9 +78,8 @@ for _, map in pairs(maps) do
 end
 
 -- filetype specific mappings (for spell checking reasons)
-
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "asciidoc",
+    pattern = { "asciidoc", "markdown" },
     callback = function(event)
         vim.keymap.set("i", "...", "…", { buffer = event.buf })
     end,

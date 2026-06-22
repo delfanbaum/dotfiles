@@ -19,12 +19,13 @@ require('config.formatters')
 require('config.gitsigns')
 require('config.lualine')
 require('config.neotest')
-require('config.treesitter')
+-- require('config.treesitter')
 require('config.twilight')
 require('config.zenmode')
 require('config.drops')
 require('config.alpha_nvim')
 require('config.nvim-lint')
+
 
 vim.cmd([[
     autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
