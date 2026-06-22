@@ -19,7 +19,7 @@ require('config.formatters')
 require('config.gitsigns')
 require('config.lualine')
 require('config.neotest')
-require('config.treesitter')
+-- require('config.treesitter')
 require('config.twilight')
 require('config.zenmode')
 require('config.drops')
@@ -30,7 +30,6 @@ require('config.nvim-lint')
 vim.cmd([[
     autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
     autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2 expandtab
 ]])
