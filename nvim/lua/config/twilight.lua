@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 twilight.setup {
-  alpha = .75,
+  alpha = .09,
   context = 1,
   inactive = true,
 }
