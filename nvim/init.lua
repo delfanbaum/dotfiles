@@ -26,6 +26,8 @@ require('config.drops')
 require('config.alpha_nvim')
 require('config.nvim-lint')
 
+-- explicit set spell place
+vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
 vim.cmd([[
     autocmd BufNewFile,BufRead *.html.tera set filetype=htmldjango
