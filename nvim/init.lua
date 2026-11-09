@@ -10,6 +10,7 @@ require('config.onedarkpro')
 require('config.options')
 require('config.active_colors')
 require('config.mappings')
+require('config.softwrap')
 
 -- plugin configs
 require('config.handlers').setup()
